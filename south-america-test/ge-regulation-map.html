@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GE Crop Regulation Map</title>
+  <title>GE Crop Regulation Map — South America Test</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
   <style>
@@ -36,9 +36,7 @@
       transition: border-color 0.15s;
     }
 
-    #country-search:focus {
-      border-color: #888;
-    }
+    #country-search:focus { border-color: #888; }
 
     #search-result {
       font-size: 12px;
@@ -84,7 +82,7 @@
       border-color: #444;
     }
 
-    /* ── Status counts bar ── */
+    /* ── Status counts ── */
     #status-counts {
       display: flex;
       flex-wrap: wrap;
@@ -108,9 +106,7 @@
       flex-shrink: 0;
     }
 
-    .count-number {
-      font-weight: 600;
-    }
+    .count-number { font-weight: 600; }
 
     /* ── Map container ── */
     #map-container {
@@ -140,8 +136,108 @@
       margin-bottom: 3px;
     }
 
-    #tooltip .tt-status {
+    #tooltip .tt-status { font-size: 12px; }
+
+    #tooltip .tt-hint {
+      font-size: 10px;
+      color: #aaa;
+      margin-top: 4px;
+    }
+
+    /* ── Detail panel ── */
+    #detail-panel {
+      display: none;
+      margin-top: 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 16px 18px;
+      background: #fafafa;
+      position: relative;
+      animation: panelFadeIn 0.2s ease;
+    }
+
+    @keyframes panelFadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    #detail-panel.visible { display: block; }
+
+    #detail-close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      font-size: 16px;
+      line-height: 1;
+      cursor: pointer;
+      color: #aaa;
+      background: none;
+      border: none;
+      padding: 2px 6px;
+    }
+
+    #detail-close:hover { color: #333; }
+
+    #detail-country-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 4px;
+      padding-right: 24px;
+    }
+
+    #detail-status-badge {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 10px;
+      border-radius: 12px;
+      color: #fff;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 6px 12px;
+      margin-bottom: 12px;
+    }
+
+    .detail-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding-top: 1px;
+    }
+
+    .detail-value {
       font-size: 12px;
+      color: #333;
+      line-height: 1.5;
+    }
+
+    .detail-value a {
+      color: #3a8fd4;
+      text-decoration: none;
+    }
+
+    .detail-value a:hover { text-decoration: underline; }
+
+    #detail-summary {
+      font-size: 12px;
+      color: #444;
+      line-height: 1.65;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+      margin-top: 4px;
+    }
+
+    #detail-no-data {
+      font-size: 12px;
+      color: #888;
+      font-style: italic;
     }
 
     /* ── Legend ── */
@@ -177,11 +273,17 @@
     .source-note a { color: #999; }
 
     path.country { transition: opacity 0.15s, stroke-width 0.15s; }
-    path.country:hover { opacity: 0.75; }
+    path.country:hover { opacity: 0.75; cursor: pointer; }
 
     path.country.highlighted {
       stroke: #111 !important;
       stroke-width: 1.5px !important;
+      opacity: 1 !important;
+    }
+
+    path.country.selected {
+      stroke: #111 !important;
+      stroke-width: 2px !important;
       opacity: 1 !important;
     }
 
@@ -195,6 +297,7 @@
         color: #eee;
       }
       #tooltip .tt-name { color: #f0f0f0; }
+      #tooltip .tt-hint { color: #666; }
 
       #country-search {
         background: #2a2a2a;
@@ -221,8 +324,24 @@
       }
 
       .count-item { color: #aaa; }
-      .legend-item { color: #ccc; }
 
+      #detail-panel {
+        background: #222;
+        border-color: #444;
+      }
+      #detail-country-name { color: #f0f0f0; }
+      #detail-close { color: #666; }
+      #detail-close:hover { color: #ccc; }
+      .detail-label { color: #666; }
+      .detail-value { color: #ccc; }
+      .detail-value a { color: #6ab0e0; }
+      #detail-summary {
+        color: #bbb;
+        border-top-color: #333;
+      }
+      #detail-no-data { color: #666; }
+
+      .legend-item { color: #ccc; }
       .source-note { color: #777; }
       .source-note a { color: #777; }
 
@@ -255,6 +374,14 @@
     <div id="tooltip"></div>
   </div>
 
+  <!-- Country detail panel (hidden until a country is clicked) -->
+  <div id="detail-panel">
+    <button id="detail-close" title="Close">✕</button>
+    <div id="detail-country-name"></div>
+    <div id="detail-status-badge"></div>
+    <div id="detail-body"></div>
+  </div>
+
   <!-- Legend -->
   <div class="legend" id="legend"></div>
 
@@ -262,7 +389,7 @@
   <p class="source-note" id="source-note">
     Source: Heaton M &amp; Ngure GM, 2026, Crop Gene Editing Regulation Tracker,
     <a href="https://cropgeregulations.com" target="_blank">cropgeregulations.com</a>.
-    Grey = no data / unclassified. Hover over a country to see its status.
+    Grey = no data / unclassified. Hover over a country for status; click for detail.
   </p>
 
   <script>
@@ -279,14 +406,15 @@
 
     const COLOR_BY_STATUS = Object.fromEntries(STATUSES.map(s => [s.key, s.color]));
     const LABEL_BY_STATUS = Object.fromEntries(STATUSES.map(s => [s.key, s.label]));
-    const COLOR_NO_DATA   = '#d4d4d4';
-    const COLOR_DIMMED    = '#ececec';
-    const COLOR_HIGHLIGHT_STROKE = '#111';
+    const COLOR_NO_DATA = '#d4d4d4';
+    const COLOR_DIMMED  = '#ececec';
 
-    let activeFilter     = null;
-    let highlightedId    = null;   // numeric id of searched country
-    let geData           = {};
+    let activeFilter  = null;
+    let highlightedId = null;
+    let selectedId    = null;
+    let geData        = {};
     let allCountryPaths;
+
     const tooltip = document.getElementById('tooltip');
 
     // ── Colour logic ──────────────────────────────────────────────
@@ -297,32 +425,115 @@
       return COLOR_BY_STATUS[entry.status] || COLOR_NO_DATA;
     }
 
+    function hasDetail(entry) {
+      return entry && (entry.legislation || entry.summary || entry.regulatory_body);
+    }
+
     function getTooltipContent(numericId, topoName) {
       const entry  = geData[String(numericId).padStart(3, '0')];
       const name   = (entry && entry.name) ? entry.name : topoName;
       const status = entry ? LABEL_BY_STATUS[entry.status] : 'No data / unclassified';
       const color  = entry ? (COLOR_BY_STATUS[entry.status] || '#888') : '#888';
+      const hint   = hasDetail(entry) ? '<div class="tt-hint">Click for detail</div>' : '';
       return `<div class="tt-name">${name}</div>
-              <div class="tt-status" style="color:${color}">${status}</div>`;
+              <div class="tt-status" style="color:${color}">${status}</div>
+              ${hint}`;
     }
+
+    // ── Detail panel ───────────────────────────────────────────────
+    function openDetailPanel(numericId, topoName) {
+      const idKey  = String(numericId).padStart(3, '0');
+      const entry  = geData[idKey];
+      const panel  = document.getElementById('detail-panel');
+      const nameEl = document.getElementById('detail-country-name');
+      const badge  = document.getElementById('detail-status-badge');
+      const body   = document.getElementById('detail-body');
+
+      const name = (entry && entry.name) ? entry.name : topoName;
+      nameEl.textContent = name;
+
+      if (entry) {
+        const color  = COLOR_BY_STATUS[entry.status] || '#888';
+        const label  = LABEL_BY_STATUS[entry.status] || 'Unknown';
+        badge.textContent        = label;
+        badge.style.background   = color;
+        badge.style.display      = 'inline-block';
+
+        if (hasDetail(entry)) {
+          // Build the detail grid rows
+          const rows = [];
+
+          if (entry.regulatory_body) {
+            rows.push(['Regulatory body', entry.regulatory_body]);
+          }
+          if (entry.year_established) {
+            rows.push(['Framework year', entry.year_established]);
+          }
+          if (entry.legislation) {
+            const legText = entry.legislation_url
+              ? `<a href="${entry.legislation_url}" target="_blank">${entry.legislation}</a>`
+              : entry.legislation;
+            rows.push(['Key legislation', legText]);
+          }
+          if (entry.approach) {
+            rows.push(['Approach', entry.approach]);
+          }
+
+          let gridHTML = '<div class="detail-grid">';
+          rows.forEach(([label, value]) => {
+            gridHTML += `<span class="detail-label">${label}</span>
+                         <span class="detail-value">${value}</span>`;
+          });
+          gridHTML += '</div>';
+
+          let summaryHTML = '';
+          if (entry.summary) {
+            summaryHTML = `<div id="detail-summary">${entry.summary}`;
+            if (entry.further_reading_url) {
+              summaryHTML += ` <a href="${entry.further_reading_url}" target="_blank">Further reading →</a>`;
+            }
+            summaryHTML += '</div>';
+          }
+
+          body.innerHTML = gridHTML + summaryHTML;
+
+        } else {
+          body.innerHTML = '<p id="detail-no-data">No detailed information available for this country yet.</p>';
+        }
+
+      } else {
+        badge.style.display = 'none';
+        body.innerHTML = '<p id="detail-no-data">No data or unclassified.</p>';
+      }
+
+      panel.classList.add('visible');
+
+      // Scroll panel into view smoothly if below the fold
+      panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function closeDetailPanel() {
+      document.getElementById('detail-panel').classList.remove('visible');
+      selectedId = null;
+      if (allCountryPaths) {
+        allCountryPaths.classed('selected', false);
+      }
+    }
+
+    document.getElementById('detail-close').addEventListener('click', closeDetailPanel);
 
     // ── Status counts ──────────────────────────────────────────────
     function buildCounts() {
       const container = document.getElementById('status-counts');
       container.innerHTML = '';
-
-      // Tally counts from geData
       const counts = {};
       STATUSES.forEach(s => { counts[s.key] = 0; });
       Object.values(geData).forEach(entry => {
         if (counts[entry.status] !== undefined) counts[entry.status]++;
       });
-
-      // If a filter is active, only show that status count; otherwise show all
       const toShow = activeFilter
         ? STATUSES.filter(s => s.key === activeFilter)
         : STATUSES;
-
       toShow.forEach(s => {
         const item = document.createElement('span');
         item.className = 'count-item';
@@ -394,10 +605,9 @@
       lg.appendChild(nodata);
     }
 
-    // ── Last updated date ──────────────────────────────────────────
+    // ── Last updated ───────────────────────────────────────────────
     function renderLastUpdated(dateStr) {
       if (!dateStr) return;
-      // Parse YYYY-MM-DD and format as "1 May 2026"
       const [y, m, d] = dateStr.split('-').map(Number);
       const formatted = new Date(y, m - 1, d)
         .toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -410,25 +620,18 @@
 
     // ── Search ─────────────────────────────────────────────────────
     function buildSearch() {
-      const input     = document.getElementById('country-search');
-      const resultEl  = document.getElementById('search-result');
-      const clearBtn  = document.getElementById('search-clear');
+      const input    = document.getElementById('country-search');
+      const resultEl = document.getElementById('search-result');
+      const clearBtn = document.getElementById('search-clear');
 
       function doSearch(query) {
         const q = query.trim().toLowerCase();
-        if (!q) {
-          clearSearch();
-          return;
-        }
-
-        // Find matching entry in geData
+        if (!q) { clearSearch(); return; }
         const match = Object.entries(geData).find(([, entry]) =>
           entry.name.toLowerCase().includes(q)
         );
-
         if (match) {
           const [idKey, entry] = match;
-          // Find the numeric id used in TopoJSON (strip leading zeros → integer)
           highlightedId = parseInt(idKey, 10);
           resultEl.textContent = `${entry.name}: ${LABEL_BY_STATUS[entry.status] || 'No data'}`;
           resultEl.style.color = COLOR_BY_STATUS[entry.status] || '#888';
@@ -459,10 +662,7 @@
       if (!allCountryPaths) return;
       allCountryPaths
         .attr('fill', d => getColor(d.id))
-        .classed('highlighted', d => d.id === highlightedId)
-        .raise(); // bring all to normal stacking
-
-      // Re-raise the highlighted path so its border renders on top
+        .classed('highlighted', d => d.id === highlightedId && d.id !== selectedId);
       if (highlightedId !== null) {
         allCountryPaths.filter(d => d.id === highlightedId).raise();
       }
@@ -494,7 +694,6 @@
         .attr('fill', d => getColor(d.id))
         .attr('stroke', '#ffffff')
         .attr('stroke-width', 0.4)
-        .style('cursor', 'default')
         .on('mousemove', function(event, d) {
           tooltip.innerHTML = getTooltipContent(d.id, d.properties.name || '');
           tooltip.style.opacity = 1;
@@ -505,7 +704,27 @@
           tooltip.style.left = (x + 14 + tw > rect.width ? x - tw - 8 : x + 14) + 'px';
           tooltip.style.top  = Math.max(0, y - 10) + 'px';
         })
-        .on('mouseleave', () => { tooltip.style.opacity = 0; });
+        .on('mouseleave', () => { tooltip.style.opacity = 0; })
+        .on('click', function(event, d) {
+          // Don't fire if the user was dragging (panning the map)
+          if (event.defaultPrevented) return;
+
+          tooltip.style.opacity = 0;
+
+          // Deselect if clicking the same country again
+          if (selectedId === d.id) {
+            closeDetailPanel();
+            return;
+          }
+
+          // Clear previous selection styling
+          allCountryPaths.classed('selected', false);
+
+          selectedId = d.id;
+          d3.select(this).classed('selected', true).raise();
+
+          openDetailPanel(d.id, d.properties.name || '');
+        });
 
       // Zoom
       const zoom = d3.zoom()
@@ -541,7 +760,6 @@
           svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity);
         });
 
-      // Initial counts now that data is loaded
       buildCounts();
     }
 
