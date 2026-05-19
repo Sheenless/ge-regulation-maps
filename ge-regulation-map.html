@@ -16,6 +16,103 @@
       padding: 4px 4px 12px 4px;
     }
 
+    /* ── Search bar ── */
+    #search-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    #country-search {
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      border: 1.5px solid #ccc;
+      background: #f5f5f5;
+      color: #333;
+      width: 180px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    #country-search:focus {
+      border-color: #888;
+    }
+
+    #search-result {
+      font-size: 12px;
+      color: #555;
+      min-height: 18px;
+    }
+
+    #search-clear {
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 20px;
+      border: 1.5px solid #ccc;
+      background: #f5f5f5;
+      color: #555;
+      cursor: pointer;
+      display: none;
+    }
+
+    /* ── Filter buttons ── */
+    .filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .filter-btn {
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1.5px solid #ccc;
+      background: #f5f5f5;
+      color: #333;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .filter-btn:hover { opacity: 0.8; }
+
+    .filter-btn.active-all {
+      background: #444;
+      color: #fff;
+      border-color: #444;
+    }
+
+    /* ── Status counts bar ── */
+    #status-counts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 16px;
+      margin-bottom: 10px;
+      min-height: 20px;
+    }
+
+    .count-item {
+      font-size: 11px;
+      color: #666;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .count-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .count-number {
+      font-weight: 600;
+    }
+
+    /* ── Map container ── */
     #map-container {
       position: relative;
       width: 100%;
@@ -47,32 +144,7 @@
       font-size: 12px;
     }
 
-    .filter-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 10px;
-    }
-
-    .filter-btn {
-      font-size: 11px;
-      padding: 4px 12px;
-      border-radius: 20px;
-      border: 1.5px solid #ccc;
-      background: #f5f5f5;
-      color: #333;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-
-    .filter-btn:hover { opacity: 0.8; }
-
-    .filter-btn.active-all {
-      background: #444;
-      color: #fff;
-      border-color: #444;
-    }
-
+    /* ── Legend ── */
     .legend {
       display: flex;
       flex-wrap: wrap;
@@ -95,28 +167,48 @@
       flex-shrink: 0;
     }
 
+    /* ── Source note ── */
     .source-note {
       margin-top: 10px;
       font-size: 11px;
       color: #999;
     }
 
-    path.country { transition: opacity 0.15s; }
+    .source-note a { color: #999; }
+
+    path.country { transition: opacity 0.15s, stroke-width 0.15s; }
     path.country:hover { opacity: 0.75; }
 
+    path.country.highlighted {
+      stroke: #111 !important;
+      stroke-width: 1.5px !important;
+      opacity: 1 !important;
+    }
+
+    /* ── Dark mode ── */
     @media (prefers-color-scheme: dark) {
-      body {
-        background: #1a1a1a;
-        color: #eee;
-      }
+      body { background: #1a1a1a; color: #eee; }
+
       #tooltip {
         background: #2a2a2a;
         border-color: #444;
         color: #eee;
       }
-      #tooltip .tt-name {
-        color: #f0f0f0;
+      #tooltip .tt-name { color: #f0f0f0; }
+
+      #country-search {
+        background: #2a2a2a;
+        border-color: #555;
+        color: #eee;
       }
+      #country-search:focus { border-color: #aaa; }
+      #search-result { color: #aaa; }
+      #search-clear {
+        background: #2a2a2a;
+        border-color: #555;
+        color: #aaa;
+      }
+
       .filter-btn {
         background: #333;
         color: #ddd;
@@ -127,31 +219,47 @@
         color: #111;
         border-color: #aaa;
       }
-      .legend-item {
-        color: #ccc;
-      }
-      .source-note {
-        color: #777;
-      }
-      .source-note a {
-        color: #aaa;
+
+      .count-item { color: #aaa; }
+      .legend-item { color: #ccc; }
+
+      .source-note { color: #777; }
+      .source-note a { color: #777; }
+
+      #zoom-reset {
+        background: #333 !important;
+        color: #ddd !important;
+        border-color: #555 !important;
       }
     }
-
   </style>
 </head>
 <body>
 
+  <!-- Search -->
+  <div id="search-row">
+    <input type="text" id="country-search" placeholder="Search country…" autocomplete="off" />
+    <span id="search-result"></span>
+    <button id="search-clear">Clear</button>
+  </div>
+
+  <!-- Filter buttons -->
   <div class="filter-row" id="filter-row"></div>
 
+  <!-- Status counts -->
+  <div id="status-counts"></div>
+
+  <!-- Map -->
   <div id="map-container">
     <svg id="map" style="width:100%; display:block;"></svg>
     <div id="tooltip"></div>
   </div>
 
+  <!-- Legend -->
   <div class="legend" id="legend"></div>
 
-  <p class="source-note">
+  <!-- Source + last updated -->
+  <p class="source-note" id="source-note">
     Source: Heaton M &amp; Ngure GM, 2026, Crop Gene Editing Regulation Tracker,
     <a href="https://cropgeregulations.com" target="_blank">cropgeregulations.com</a>.
     Grey = no data / unclassified. Hover over a country to see its status.
@@ -159,34 +267,29 @@
 
   <script>
 
-    /*
-     * -------------------------------------------------------
-     * CONFIGURATION
-     * Update DATA_URL to point to your hosted JSON file,
-     * e.g. https://yourusername.github.io/blog-charts/ge-regulation-data.json
-     * -------------------------------------------------------
-     */
     const DATA_URL = 'ge-regulation-data.json';
-
     const TOPO_URL = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
 
     const STATUSES = [
-      { key: 'distinct',    label: 'GE recognised as distinct from GM', color: '#3a9e3a' },
-      { key: 'gm',          label: 'Regulated as GM',                   color: '#3a8fd4' },
-      { key: 'changing',    label: 'Changing regulation',               color: '#e6b800' },
-      { key: 'prohibited',  label: 'Prohibited',                        color: '#9b4dca' },
+      { key: 'distinct',   label: 'GE recognised as distinct from GM', color: '#3a9e3a' },
+      { key: 'gm',         label: 'Regulated as GM',                   color: '#3a8fd4' },
+      { key: 'changing',   label: 'Changing regulation',               color: '#e6b800' },
+      { key: 'prohibited', label: 'Prohibited',                        color: '#9b4dca' },
     ];
 
     const COLOR_BY_STATUS = Object.fromEntries(STATUSES.map(s => [s.key, s.color]));
     const LABEL_BY_STATUS = Object.fromEntries(STATUSES.map(s => [s.key, s.label]));
     const COLOR_NO_DATA   = '#d4d4d4';
     const COLOR_DIMMED    = '#ececec';
+    const COLOR_HIGHLIGHT_STROKE = '#111';
 
-    let activeFilter = null;
-    let geData = {};
+    let activeFilter     = null;
+    let highlightedId    = null;   // numeric id of searched country
+    let geData           = {};
     let allCountryPaths;
     const tooltip = document.getElementById('tooltip');
 
+    // ── Colour logic ──────────────────────────────────────────────
     function getColor(numericId) {
       const entry = geData[String(numericId).padStart(3, '0')];
       if (!entry) return COLOR_NO_DATA;
@@ -195,7 +298,7 @@
     }
 
     function getTooltipContent(numericId, topoName) {
-      const entry = geData[String(numericId).padStart(3, '0')];
+      const entry  = geData[String(numericId).padStart(3, '0')];
       const name   = (entry && entry.name) ? entry.name : topoName;
       const status = entry ? LABEL_BY_STATUS[entry.status] : 'No data / unclassified';
       const color  = entry ? (COLOR_BY_STATUS[entry.status] || '#888') : '#888';
@@ -203,21 +306,46 @@
               <div class="tt-status" style="color:${color}">${status}</div>`;
     }
 
+    // ── Status counts ──────────────────────────────────────────────
+    function buildCounts() {
+      const container = document.getElementById('status-counts');
+      container.innerHTML = '';
+
+      // Tally counts from geData
+      const counts = {};
+      STATUSES.forEach(s => { counts[s.key] = 0; });
+      Object.values(geData).forEach(entry => {
+        if (counts[entry.status] !== undefined) counts[entry.status]++;
+      });
+
+      // If a filter is active, only show that status count; otherwise show all
+      const toShow = activeFilter
+        ? STATUSES.filter(s => s.key === activeFilter)
+        : STATUSES;
+
+      toShow.forEach(s => {
+        const item = document.createElement('span');
+        item.className = 'count-item';
+        item.innerHTML = `
+          <span class="count-dot" style="background:${s.color}"></span>
+          <span class="count-number">${counts[s.key]}</span>
+          <span>${s.label}</span>`;
+        container.appendChild(item);
+      });
+    }
+
+    // ── Filter buttons ─────────────────────────────────────────────
     function buildFilters() {
       const row = document.getElementById('filter-row');
+
       const allBtn = document.createElement('button');
       allBtn.className = 'filter-btn active-all';
       allBtn.textContent = 'Show all';
       allBtn.addEventListener('click', () => {
         activeFilter = null;
-        row.querySelectorAll('.filter-btn').forEach(b => {
-          b.classList.remove('active-all');
-          b.style.background = '';
-          b.style.color = '';
-          b.style.borderColor = '';
-        });
-        allBtn.classList.add('active-all');
+        resetFilterButtonStyles(row, allBtn, null);
         if (allCountryPaths) allCountryPaths.attr('fill', d => getColor(d.id));
+        buildCounts();
       });
       row.appendChild(allBtn);
 
@@ -227,21 +355,31 @@
         btn.textContent = s.label;
         btn.addEventListener('click', () => {
           activeFilter = s.key;
-          row.querySelectorAll('.filter-btn').forEach(b => {
-            b.classList.remove('active-all');
-            b.style.background = '';
-            b.style.color = '';
-            b.style.borderColor = '';
-          });
-          btn.style.background   = s.color;
-          btn.style.color        = '#fff';
-          btn.style.borderColor  = s.color;
+          resetFilterButtonStyles(row, btn, s);
           if (allCountryPaths) allCountryPaths.attr('fill', d => getColor(d.id));
+          buildCounts();
         });
         row.appendChild(btn);
       });
     }
 
+    function resetFilterButtonStyles(row, activeBtn, activeStatus) {
+      row.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('active-all');
+        b.style.background  = '';
+        b.style.color       = '';
+        b.style.borderColor = '';
+      });
+      if (activeStatus) {
+        activeBtn.style.background  = activeStatus.color;
+        activeBtn.style.color       = '#fff';
+        activeBtn.style.borderColor = activeStatus.color;
+      } else {
+        activeBtn.classList.add('active-all');
+      }
+    }
+
+    // ── Legend ─────────────────────────────────────────────────────
     function buildLegend() {
       const lg = document.getElementById('legend');
       STATUSES.forEach(s => {
@@ -256,85 +394,168 @@
       lg.appendChild(nodata);
     }
 
-function buildMap(world) {
-  const width  = 800;
-  const height = 450;
+    // ── Last updated date ──────────────────────────────────────────
+    function renderLastUpdated(dateStr) {
+      if (!dateStr) return;
+      // Parse YYYY-MM-DD and format as "1 May 2026"
+      const [y, m, d] = dateStr.split('-').map(Number);
+      const formatted = new Date(y, m - 1, d)
+        .toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+      const note = document.getElementById('source-note');
+      const span = document.createElement('span');
+      span.style.marginLeft = '6px';
+      span.textContent = `Data last updated: ${formatted}.`;
+      note.appendChild(span);
+    }
 
-  const svg = d3.select('#map')
-    .attr('viewBox', `0 0 ${width} ${height}`)
-    .style('cursor', 'grab');
+    // ── Search ─────────────────────────────────────────────────────
+    function buildSearch() {
+      const input     = document.getElementById('country-search');
+      const resultEl  = document.getElementById('search-result');
+      const clearBtn  = document.getElementById('search-clear');
 
-  const projection = d3.geoNaturalEarth1()
-    .scale(128)
-    .translate([width / 2, height / 2 + 20]);
+      function doSearch(query) {
+        const q = query.trim().toLowerCase();
+        if (!q) {
+          clearSearch();
+          return;
+        }
 
-  const path = d3.geoPath(projection);
-  const countries = topojson.feature(world, world.objects.countries);
+        // Find matching entry in geData
+        const match = Object.entries(geData).find(([, entry]) =>
+          entry.name.toLowerCase().includes(q)
+        );
 
-  const g = svg.append('g');
+        if (match) {
+          const [idKey, entry] = match;
+          // Find the numeric id used in TopoJSON (strip leading zeros → integer)
+          highlightedId = parseInt(idKey, 10);
+          resultEl.textContent = `${entry.name}: ${LABEL_BY_STATUS[entry.status] || 'No data'}`;
+          resultEl.style.color = COLOR_BY_STATUS[entry.status] || '#888';
+          clearBtn.style.display = 'inline-block';
+          applyHighlight();
+        } else {
+          highlightedId = null;
+          resultEl.textContent = 'Country not found';
+          resultEl.style.color = '#c00';
+          clearBtn.style.display = 'inline-block';
+          applyHighlight();
+        }
+      }
 
-  allCountryPaths = g.selectAll('path.country')
-    .data(countries.features)
-    .join('path')
-    .attr('class', 'country')
-    .attr('d', path)
-    .attr('fill', d => getColor(d.id))
-    .attr('stroke', '#ffffff')
-    .attr('stroke-width', 0.4)
-    .style('cursor', 'default')
-    .on('mousemove', function(event, d) {
-      tooltip.innerHTML = getTooltipContent(d.id, d.properties.name || '');
-      tooltip.style.opacity = 1;
-      const rect = document.getElementById('map-container').getBoundingClientRect();
-      const x = event.clientX - rect.left;
-      const y = event.clientY - rect.top;
-      const tw = 220;
-      tooltip.style.left = (x + 14 + tw > rect.width ? x - tw - 8 : x + 14) + 'px';
-      tooltip.style.top  = Math.max(0, y - 10) + 'px';
-    })
-    .on('mouseleave', () => { tooltip.style.opacity = 0; });
+      function clearSearch() {
+        highlightedId = null;
+        input.value = '';
+        resultEl.textContent = '';
+        clearBtn.style.display = 'none';
+        applyHighlight();
+      }
 
-  const zoom = d3.zoom()
-    .scaleExtent([1, 8])
-    .filter(event => !event.button)
-    .on('zoom', (event) => {
-      g.attr('transform', event.transform);
-      g.selectAll('path.country')
-        .attr('stroke-width', 0.4 / event.transform.k);
-      svg.style('cursor', event.transform.k > 1 ? 'grabbing' : 'grab');
-      d3.select('#zoom-reset')
-        .style('opacity', event.transform.k > 1 ? '1' : '0');
-    });
+      input.addEventListener('input', () => doSearch(input.value));
+      clearBtn.addEventListener('click', clearSearch);
+    }
 
-  svg.call(zoom);
+    function applyHighlight() {
+      if (!allCountryPaths) return;
+      allCountryPaths
+        .attr('fill', d => getColor(d.id))
+        .classed('highlighted', d => d.id === highlightedId)
+        .raise(); // bring all to normal stacking
 
-  d3.select('#map-container').insert('button', '#map')
-    .attr('id', 'zoom-reset')
-    .text('Reset zoom')
-    .style('position', 'absolute')
-    .style('top', '8px')
-    .style('right', '8px')
-    .style('font-size', '11px')
-    .style('padding', '4px 10px')
-    .style('border-radius', '12px')
-    .style('border', '1px solid #ccc')
-    .style('background', '#fff')
-    .style('cursor', 'pointer')
-    .style('opacity', '0')
-    .style('transition', 'opacity 0.2s')
-    .on('click', () => {
-      svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity);
-    });
-}
+      // Re-raise the highlighted path so its border renders on top
+      if (highlightedId !== null) {
+        allCountryPaths.filter(d => d.id === highlightedId).raise();
+      }
+    }
 
+    // ── Map ────────────────────────────────────────────────────────
+    function buildMap(world) {
+      const width  = 800;
+      const height = 450;
+
+      const svg = d3.select('#map')
+        .attr('viewBox', `0 0 ${width} ${height}`)
+        .style('cursor', 'grab');
+
+      const projection = d3.geoNaturalEarth1()
+        .scale(128)
+        .translate([width / 2, height / 2 + 20]);
+
+      const path = d3.geoPath(projection);
+      const countries = topojson.feature(world, world.objects.countries);
+
+      const g = svg.append('g');
+
+      allCountryPaths = g.selectAll('path.country')
+        .data(countries.features)
+        .join('path')
+        .attr('class', 'country')
+        .attr('d', path)
+        .attr('fill', d => getColor(d.id))
+        .attr('stroke', '#ffffff')
+        .attr('stroke-width', 0.4)
+        .style('cursor', 'default')
+        .on('mousemove', function(event, d) {
+          tooltip.innerHTML = getTooltipContent(d.id, d.properties.name || '');
+          tooltip.style.opacity = 1;
+          const rect = document.getElementById('map-container').getBoundingClientRect();
+          const x = event.clientX - rect.left;
+          const y = event.clientY - rect.top;
+          const tw = 220;
+          tooltip.style.left = (x + 14 + tw > rect.width ? x - tw - 8 : x + 14) + 'px';
+          tooltip.style.top  = Math.max(0, y - 10) + 'px';
+        })
+        .on('mouseleave', () => { tooltip.style.opacity = 0; });
+
+      // Zoom
+      const zoom = d3.zoom()
+        .scaleExtent([1, 8])
+        .filter(event => !event.button)
+        .on('zoom', (event) => {
+          g.attr('transform', event.transform);
+          g.selectAll('path.country')
+            .attr('stroke-width', 0.4 / event.transform.k);
+          svg.style('cursor', event.transform.k > 1 ? 'grabbing' : 'grab');
+          d3.select('#zoom-reset')
+            .style('opacity', event.transform.k > 1 ? '1' : '0');
+        });
+
+      svg.call(zoom);
+
+      // Reset zoom button
+      d3.select('#map-container').insert('button', '#map')
+        .attr('id', 'zoom-reset')
+        .text('Reset zoom')
+        .style('position', 'absolute')
+        .style('top', '8px')
+        .style('right', '8px')
+        .style('font-size', '11px')
+        .style('padding', '4px 10px')
+        .style('border-radius', '12px')
+        .style('border', '1px solid #ccc')
+        .style('background', '#fff')
+        .style('cursor', 'pointer')
+        .style('opacity', '0')
+        .style('transition', 'opacity 0.2s')
+        .on('click', () => {
+          svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity);
+        });
+
+      // Initial counts now that data is loaded
+      buildCounts();
+    }
+
+    // ── Bootstrap ──────────────────────────────────────────────────
     buildFilters();
     buildLegend();
+    buildSearch();
 
     Promise.all([
       fetch(DATA_URL).then(r => r.json()),
       d3.json(TOPO_URL)
     ]).then(([dataJson, world]) => {
       geData = dataJson.countries || {};
+      renderLastUpdated((dataJson._metadata || {}).last_updated);
       buildMap(world);
     }).catch(err => {
       console.error('Failed to load map data:', err);
