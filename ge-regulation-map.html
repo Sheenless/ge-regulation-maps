@@ -103,6 +103,41 @@
 
     path.country { transition: opacity 0.15s; }
     path.country:hover { opacity: 0.75; }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #1a1a1a;
+        color: #eee;
+      }
+      #tooltip {
+        background: #2a2a2a;
+        border-color: #444;
+        color: #eee;
+      }
+      #tooltip .tt-name {
+        color: #f0f0f0;
+      }
+      .filter-btn {
+        background: #333;
+        color: #ddd;
+        border-color: #555;
+      }
+      .filter-btn.active-all {
+        background: #aaa;
+        color: #111;
+        border-color: #aaa;
+      }
+      .legend-item {
+        color: #ccc;
+      }
+      .source-note {
+        color: #777;
+      }
+      .source-note a {
+        color: #aaa;
+      }
+    }
+
   </style>
 </head>
 <body>
