@@ -256,41 +256,84 @@
       lg.appendChild(nodata);
     }
 
-    function buildMap(world) {
-      const width  = 800;
-      const height = 450;
+function buildMap(world) {
+  const width  = 800;
+  const height = 450;
 
-      const svg = d3.select('#map')
-        .attr('viewBox', `0 0 ${width} ${height}`);
+  const svg = d3.select('#map')
+    .attr('viewBox', `0 0 ${width} ${height}`)
+    .style('cursor', 'grab');
 
-      const projection = d3.geoNaturalEarth1()
-        .scale(128)
-        .translate([width / 2, height / 2 + 20]);
+  const projection = d3.geoNaturalEarth1()
+    .scale(128)
+    .translate([width / 2, height / 2 + 20]);
 
-      const path = d3.geoPath(projection);
-      const countries = topojson.feature(world, world.objects.countries);
+  const path = d3.geoPath(projection);
+  const countries = topojson.feature(world, world.objects.countries);
 
-      allCountryPaths = svg.selectAll('path.country')
-        .data(countries.features)
-        .join('path')
-        .attr('class', 'country')
-        .attr('d', path)
-        .attr('fill', d => getColor(d.id))
-        .attr('stroke', '#ffffff')
-        .attr('stroke-width', 0.4)
-        .style('cursor', 'default')
-        .on('mousemove', function(event, d) {
-          tooltip.innerHTML = getTooltipContent(d.id, d.properties.name || '');
-          tooltip.style.opacity = 1;
-          const rect = document.getElementById('map-container').getBoundingClientRect();
-          const x = event.clientX - rect.left;
-          const y = event.clientY - rect.top;
-          const tw = 220;
-          tooltip.style.left = (x + 14 + tw > rect.width ? x - tw - 8 : x + 14) + 'px';
-          tooltip.style.top  = Math.max(0, y - 10) + 'px';
-        })
-        .on('mouseleave', () => { tooltip.style.opacity = 0; });
-    }
+  // Wrap all map content in a group so zoom transforms apply to it
+  const g = svg.append('g');
+
+  allCountryPaths = g.selectAll('path.country')
+    .data(countries.features)
+    .join('path')
+    .attr('class', 'country')
+    .attr('d', path)
+    .attr('fill', d => getColor(d.id))
+    .attr('stroke', '#ffffff')
+    .attr('stroke-width', 0.4)
+    .style('cursor', 'default')
+    .on('mousemove', function(event, d) {
+      tooltip.innerHTML = getTooltipContent(d.id, d.properties.name || '');
+      tooltip.style.opacity = 1;
+      const rect = document.getElementById('map-container').getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      const tw = 220;
+      tooltip.style.left = (x + 14 + tw > rect.width ? x - tw - 8 : x + 14) + 'px';
+      tooltip.style.top  = Math.max(0, y - 10) + 'px';
+    })
+    .on('mouseleave', () => { tooltip.style.opacity = 0; });
+
+  // Zoom behaviour
+  const zoom = d3.zoom()
+    .scaleExtent([1, 8])          // min zoom 1x, max zoom 8x
+    .on('zoom', (event) => {
+      g.attr('transform', event.transform);
+      // Thin the borders as you zoom in so they don't overwhelm
+      g.selectAll('path.country')
+        .attr('stroke-width', 0.4 / event.transform.k);
+      svg.style('cursor', event.transform.k > 1 ? 'grabbing' : 'grab');
+    });
+
+  svg.call(zoom);
+
+  // Reset button
+  d3.select('#map-container').insert('button', '#map')
+    .attr('id', 'zoom-reset')
+    .text('Reset zoom')
+    .style('position', 'absolute')
+    .style('top', '8px')
+    .style('right', '8px')
+    .style('font-size', '11px')
+    .style('padding', '4px 10px')
+    .style('border-radius', '12px')
+    .style('border', '1px solid #ccc')
+    .style('background', '#fff')
+    .style('cursor', 'pointer')
+    .style('opacity', '0')
+    .style('transition', 'opacity 0.2s')
+    .on('click', () => {
+      svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity);
+    });
+
+  // Show/hide reset button based on zoom level
+  svg.on('zoom.button', null);
+  zoom.on('zoom.button', (event) => {
+    d3.select('#zoom-reset')
+      .style('opacity', event.transform.k > 1 ? '1' : '0');
+  });
+}
 
     buildFilters();
     buildLegend();
