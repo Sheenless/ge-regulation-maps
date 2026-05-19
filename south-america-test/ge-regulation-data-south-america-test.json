@@ -1,0 +1,106 @@
+{
+  "_metadata": {
+    "title": "Crop Gene Editing Regulation Status by Country — South America Test",
+    "source": "Heaton M & Ngure GM, 2026, Crop Gene Editing Regulation Tracker",
+    "url": "https://cropgeregulations.com",
+    "last_updated": "2026-05-18",
+    "key_type": "ISO 3166-1 numeric",
+    "statuses": {
+      "distinct": "GE recognised as distinct from GM",
+      "gm": "Regulated as GM",
+      "changing": "Changing regulation",
+      "prohibited": "Prohibited"
+    },
+    "notes": "Test file using enriched schema for South American countries. For use in developing Feature 4 (country detail panel). Verify against source tracker before publication."
+  },
+  "countries": {
+    "032": {
+      "name": "Argentina",
+      "status": "distinct",
+      "legislation": "Ministry of Economy, Secretariat of Agriculture, Livestock and Fisheries. Resolution No. 24/2026",
+      "legislation_url": "https://www.magyp.gob.ar/sitio/areas/biotecnologia/conabia/marco_regulatorio_nbt.php",
+      "year_established": 2015,
+      "regulatory_body": "Argentine Biosafety Commission (CONABIA)",
+      "summary": "Argentina was the first country in the world to establish a regulatory framework specifically for gene-edited crops, through Decision 173/2015. Gene-edited products without foreign DNA are classified as conventional and exempt from GMO regulation. This product-based, foreign-DNA criterion has become an international regulatory standard — the 'Argentina model'.",
+      "approach": "Product-based, case-by-case. Developers submit a dossier to CONABIA, which determines whether the product contains stable foreign DNA.",
+      "further_reading_url": "https://cropgeregulations.com/argentinas-updated-approach-to-new-breeding-techniques/"
+    },
+    "076": {
+      "name": "Brazil",
+      "status": "distinct",
+      "legislation": "Ministry of Science, Technology, Innovation, and Communications. Normative Resolution CTNBio No. 16/2018",
+      "legislation_url": "https://in.gov.br/en/web/dou/-/resolucao-normativa-n-16-de-15-de-janeiro-de-2018-2020545",
+      "year_established": 2018,
+      "regulatory_body": "National Technical Commission on Biosafety (CTNBio)",
+      "summary": "CTNBio established a framework for gene-edited crops through Normative Resolution No. 16 (RN16), issued 15 January 2018. RN16 defines 'Innovative Precision Improvement Techniques' (TIMPs) and allows developers to seek a determination on GMO classification. Products without recombinant DNA/RNA in the final product are eligible for non-GMO classification. In December 2024, MARA issued five biosafety certificates for gene-edited events, including the first gene-edited rice event approved for domestic cultivation.",
+      "approach": "Product-based, consultation procedure. Products without recombinant DNA/RNA in the final product are classified as conventional.",
+      "further_reading_url": "https://cropgeregulations.com/locations/south-america/"
+    },
+    "152": {
+      "name": "Chile",
+      "status": "changing",
+      "legislation": "Ministry of Agriculture, SAG. Draft Resolution on NBTs (open for public consultation, January 2026)",
+      "legislation_url": "https://www.sag.gob.cl/sites/default/files/Proyecto-Resolucion-NBT-Consulta-Publica.pdf",
+      "year_established": 2017,
+      "regulatory_body": "Servicio Agrícola y Ganadero (SAG)",
+      "summary": "Chile has operated an informal case-by-case evaluation procedure since 2017 under Resolution No. 1523/2001. A draft resolution published for public consultation on 7 January 2026 would formalise this as a mandatory administrative process with a defined 20 working-day determination timeline. The draft explicitly excludes insertions of alleles from the same species from the definition of 'new combination of genetic material'. As of May 2026, the draft has not yet entered into force, pending publication in the Diario Oficial.",
+      "approach": "Informal case-by-case procedure pending formalisation. Based on whether product contains a new combination of genetic material.",
+      "further_reading_url": "https://cropgeregulations.com/locations/south-america/"
+    },
+    "170": {
+      "name": "Colombia",
+      "status": "distinct",
+      "legislation": "Colombian Institute of Agriculture and Livestock (ICA). Resolution No. 00022991/2022",
+      "legislation_url": "https://www.ica.gov.co/getattachment/e4b3a97e-b44e-4974-8bb0-f3b947063e67/2022R22991.aspx",
+      "year_established": 2018,
+      "regulatory_body": "Instituto Colombiano Agropecuario (ICA)",
+      "summary": "Colombia's framework was originally established by ICA Resolution No. 29299/2018 and extended by Resolution No. 00022991 (November 2022), which broadened scope to cover animals in addition to crop plants. Only products containing stable foreign genetic material are classified as Living Modified Organisms. Products without foreign DNA are treated as conventional.",
+      "approach": "Product-based, case-by-case. Central criterion is presence or absence of stable foreign genetic material.",
+      "further_reading_url": "https://cropgeregulations.com/locations/south-america/"
+    },
+    "218": {
+      "name": "Ecuador",
+      "status": "distinct",
+      "legislation": "Ministry of Agriculture, Livestock, and Fisheries. Ministerial Agreement No. 063/2023",
+      "legislation_url": "http://servicios.agricultura.gob.ec/mag01/pdfs/aministerial/2023/063-2023_acuerdo_ministerial_guia_tecnica_edicion_genetica_vf_numerado-signed.pdf",
+      "year_established": 2023,
+      "regulatory_body": "Ministry of Agriculture, Livestock, and Fisheries (MAGAP)",
+      "summary": "Ecuador operates within a constrained framework — Article 401 of the 2008 Constitution declares Ecuador a GMO-free country. However, Ministerial Agreement No. 063/2023 established that only organisms containing recombinant or foreign DNA qualify as GMOs, creating a definitional exemption for transgene-free gene-edited products. The first application under this framework was submitted in October 2024 for a gene-edited banana variety developed in response to Fusarium wilt TR4 pressure.",
+      "approach": "Definitional exclusion. Transgene-free gene-edited products fall outside the GMO definition under the Organic Code of the Environment (2019), without overriding the constitutional prohibition.",
+      "further_reading_url": "https://cropgeregulations.com/locations/south-america/"
+    },
+    "600": {
+      "name": "Paraguay",
+      "status": "distinct",
+      "legislation": "Ministry of Agriculture and Livestock. Resolution No. 842/2019",
+      "legislation_url": "https://conbio.mag.gov.py/media/ckfinder/files/RES.N842%2010%20DE%20JULIO%20DE%202019%20NBT.pdf",
+      "year_established": 2019,
+      "regulatory_body": "National Commission on Agricultural and Forestry Biosafety (CONBIO)",
+      "summary": "Paraguay established its gene editing regulatory framework in 2019 through CONBIO Resolution No. 842. Classification is determined on a case-by-case basis according to whether the final product contains foreign DNA. Paraguay was among the earlier Latin American adopters of a GE-specific regulatory pathway, following Argentina, Brazil, and Chile.",
+      "approach": "Product-based, case-by-case. Classification determined by presence or absence of foreign DNA in the final product.",
+      "further_reading_url": "https://cropgeregulations.com/locations/south-america/"
+    },
+    "604": {
+      "name": "Peru",
+      "status": "changing",
+      "legislation": "Ministry of Environment. Ministerial Resolution No. D000068-2026-MINAM-DM",
+      "legislation_url": "https://www.gob.pe/institucion/minam/normas-legales/7834313-d000068-2026-minam-dm",
+      "year_established": 2026,
+      "regulatory_body": "Ministry of the Environment (MINAM)",
+      "summary": "Peru's situation is distinctive due to the coexistence of a new GE classification framework with an active GMO moratorium. Law 29811 (2011), extended by Law 31111 to 31 December 2035, maintains a moratorium on Living Modified Organisms. Within this, MINAM approved Ministerial Resolution No. D000068-2026-MINAM-DM on 8 March 2026, establishing criteria to determine whether NBT-derived products fall within the scope of the moratorium. Transgene-free gene-edited products that do not meet the LMO definition may be classified as conventional.",
+      "approach": "Definitional exclusion operating within an active GMO moratorium. Transgene-free products may be classified as conventional under criteria established March 2026.",
+      "further_reading_url": "https://cropgeregulations.com/locations/south-america/"
+    },
+    "858": {
+      "name": "Uruguay",
+      "status": "distinct",
+      "legislation": "Ministry of Livestock, Agriculture, and Fisheries / Ministry of Environment. Decree 84/024",
+      "legislation_url": "https://medios.presidencia.gub.uy/legal/2024/decretos/03/mgap_18.pdf",
+      "year_established": 2024,
+      "regulatory_body": "Ministry of Livestock, Agriculture, and Fisheries (MGAP)",
+      "summary": "Uruguay established its gene editing regulatory framework through Decree 84/024, announced 18 March 2024, making it one of the more recent Latin American adopters. The decree established a Technical Working Group process to determine on a case-by-case basis whether a gene-edited product should be classified as a GMO, with the central criterion being the presence or absence of foreign DNA in the final product. Uruguay's framework is consistent with the broader regional convergence around the product-based foreign-DNA criterion that has emerged across Latin America since Argentina's 2015 decision.",
+      "approach": "Product-based, case-by-case via Technical Working Group. Central criterion is presence or absence of foreign DNA.",
+      "further_reading_url": "https://cropgeregulations.com/locations/south-america/"
+    }
+  }
+}
