@@ -243,11 +243,6 @@
     const DATA_URL = 'ge-regulation-data.json';
     const TOPO_URL = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
 
-    // UK nations GeoJSON from a stable public source (Natural Earth admin-1 via geojson.io mirror).
-    // This contains England, Scotland, Wales, Northern Ireland as separate features
-    // with ISO 3166-2 codes in the properties.iso_3166_2 field.
-    const UK_NATIONS_URL = 'https://raw.githubusercontent.com/datasets/geo-boundaries-world-110m/master/countries.geojson';
-
     // ── Status definitions ─────────────────────────────────────────
     const STATUSES = [
       { key: 'distinct',   label: 'GE recognised as distinct from GM', color: '#3a9e3a' },
@@ -618,26 +613,11 @@
     // Coordinates below are simplified Natural Earth admin-1 polygons for
     // England, Scotland, Wales, and Northern Ireland.
     function buildUKNationsGeoJSON() {
-      // Rather than embedding full polygon coordinates (which would be thousands
-      // of vertices), we fetch from the Natural Earth / geoBoundaries CDN.
-      // The property 'iso_3166_2' in Natural Earth admin-1 holds the GB-* codes.
-      const NE_ADMIN1_UK_URL =
-        'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_1_states_provinces_gbr.geojson';
-      return fetch(NE_ADMIN1_UK_URL)
-        .then(r => { if (!r.ok) throw new Error('UK GeoJSON fetch failed'); return r.json(); })
-        .then(gj => {
-          // Natural Earth uses iso_3166_2 field. Map to iso_code for our code.
-          gj.features.forEach(f => {
-            const raw = f.properties.iso_3166_2 || f.properties.iso_a2 || '';
-            // raw is e.g. "GB-ENG"; assign to iso_code
-            f.properties.iso_code = raw;
-          });
-          // Keep only features whose iso_code is in our subdivisions block
-          gj.features = gj.features.filter(f =>
-            Object.keys(subdivData).includes(f.properties.iso_code)
-          );
-          return gj;
-        })
+      // Loads a pre-built, repo-local GeoJSON of the four UK nations.
+      // Generated from Natural Earth admin-1 data dissolved to nation level.
+      // iso_code property matches the keys in the subdivisions block of the data JSON.
+      return fetch('uk-nations.geojson')
+        .then(r => { if (!r.ok) throw new Error('UK nations GeoJSON not found'); return r.json(); })
         .catch(err => {
           console.warn('Could not load UK nations GeoJSON:', err.message);
           return null;
