@@ -112,6 +112,10 @@
     #map-container {
       position: relative;
       width: 100%;
+      --map-bg: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      #map-container { --map-bg: #1a1a1a; }
     }
 
     #tooltip {
@@ -274,8 +278,8 @@
 
     // For world countries (looked up by numeric d.id)
     function getColor(numericId) {
-      // UK sovereign (826) — suppress: the overlay layer handles it
-      if (numericId === 826) return 'transparent';
+      // UK sovereign (826): return a sentinel; fill is set directly on the element
+      if (numericId === 826) return 'var(--map-bg, #1a1a1a)';
 
       const entry = geData[String(numericId).padStart(3, '0')];
       if (!entry) return COLOR_NO_DATA;
@@ -478,24 +482,54 @@
     }
 
     function applyHighlight() {
+      // Remove any previous highlight overlay path
+      d3.select('#highlight-overlay').remove();
+
       if (allCountryPaths) {
         allCountryPaths
           .attr('fill', d => getColor(d.id))
-          .classed('highlighted', d => d.id === highlightedId)
-          .style('stroke', d => d.id === highlightedId ? '#ffffff' : (d.id === 826 ? 'none' : null))
-          .style('stroke-width', d => d.id === highlightedId ? '0.6px' : null);
-        if (typeof highlightedId === 'number') {
-          allCountryPaths.filter(d => d.id === highlightedId).raise();
-        }
+          .classed('highlighted', false)
+          .style('stroke', d => d.id === 826 ? 'none' : null)
+          .style('stroke-width', null);
       }
       if (allNationPaths) {
         allNationPaths
           .attr('fill', d => getNationColor(d.properties.iso_code))
-          .classed('highlighted', d => d.properties.iso_code === highlightedId)
-          .style('stroke', d => d.properties.iso_code === highlightedId ? '#ffffff' : null)
-          .style('stroke-width', d => d.properties.iso_code === highlightedId ? '0.6px' : null);
-        if (typeof highlightedId === 'string') {
-          allNationPaths.filter(d => d.properties.iso_code === highlightedId).raise();
+          .classed('highlighted', false)
+          .style('stroke', null)
+          .style('stroke-width', null);
+      }
+
+      if (highlightedId === null) return;
+
+      if (typeof highlightedId === 'number' && allCountryPaths) {
+        // For regular countries: draw a highlight outline path on top of everything
+        // by cloning the path data into a new element in a top-level overlay group
+        const matched = allCountryPaths.filter(d => d.id === highlightedId);
+        if (!matched.empty()) {
+          const pathD = matched.attr('d');
+          const svg = d3.select('#map').select('g');
+          svg.append('path')
+            .attr('id', 'highlight-overlay')
+            .attr('d', pathD)
+            .attr('fill', 'none')
+            .attr('stroke', '#ffffff')
+            .attr('stroke-width', 0.6)
+            .attr('pointer-events', 'none');
+        }
+      } else if (typeof highlightedId === 'string' && allNationPaths) {
+        // For UK nations: same approach
+        const matched = allNationPaths.filter(d => d.properties.iso_code === highlightedId);
+        if (!matched.empty()) {
+          const pathD = matched.attr('d');
+          const svg = d3.select('#map').select('g');
+          svg.append('path')
+            .attr('id', 'highlight-overlay')
+            .attr('d', pathD)
+            .attr('fill', 'none')
+            .attr('stroke', '#ffffff')
+            .attr('stroke-width', 0.6)
+            .attr('pointer-events', 'none');
         }
       }
     }
