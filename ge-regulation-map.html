@@ -170,8 +170,8 @@
     .source-note a { color: #999; }
 
     path.country      { transition: opacity 0.15s, stroke-width 0.15s; }
+    path.country.uk-sovereign { stroke: none !important; fill: none !important; pointer-events: none; }
     path.country:hover { opacity: 0.75; }
-    path.country.uk-sovereign { stroke: none !important; fill: none !important; pointer-events: none !important; opacity: 0 !important; }
     path.uk-nation    { transition: opacity 0.15s, stroke-width 0.15s; }
     path.uk-nation:hover { opacity: 0.75; }
 
@@ -481,7 +481,9 @@
       if (allCountryPaths) {
         allCountryPaths
           .attr('fill', d => getColor(d.id))
-          .classed('highlighted', d => d.id === highlightedId);
+          .classed('highlighted', d => d.id === highlightedId)
+          .style('stroke', d => d.id === highlightedId ? '#ffffff' : (d.id === 826 ? 'none' : null))
+          .style('stroke-width', d => d.id === highlightedId ? '0.6px' : null);
         if (typeof highlightedId === 'number') {
           allCountryPaths.filter(d => d.id === highlightedId).raise();
         }
@@ -489,7 +491,9 @@
       if (allNationPaths) {
         allNationPaths
           .attr('fill', d => getNationColor(d.properties.iso_code))
-          .classed('highlighted', d => d.properties.iso_code === highlightedId);
+          .classed('highlighted', d => d.properties.iso_code === highlightedId)
+          .style('stroke', d => d.properties.iso_code === highlightedId ? '#ffffff' : null)
+          .style('stroke-width', d => d.properties.iso_code === highlightedId ? '0.6px' : null);
         if (typeof highlightedId === 'string') {
           allNationPaths.filter(d => d.properties.iso_code === highlightedId).raise();
         }
@@ -534,8 +538,8 @@
         .attr('class', d => d.id === 826 ? 'country uk-sovereign' : 'country')
         .attr('d', path)
         .attr('fill', d => getColor(d.id))
-        .attr('stroke', '#ffffff')
-        .attr('stroke-width', 0.4)
+        .attr('stroke', d => d.id === 826 ? 'none' : '#ffffff')
+        .attr('stroke-width', d => d.id === 826 ? 0 : 0.4)
         .style('cursor', 'default')
         .on('mousemove', function(event, d) {
           const html = getTooltipContent(d.id, d.properties.name || '');
