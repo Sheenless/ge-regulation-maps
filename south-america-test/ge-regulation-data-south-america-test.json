@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "title": "Crop Gene Editing Regulation Status by Country — South America Test",
+    "title": "Crop Gene Editing Regulation Status by Country",
     "source": "Heaton M & Ngure GM, 2026, Crop Gene Editing Regulation Tracker",
     "url": "https://cropgeregulations.com",
     "last_updated": "2026-05-18",
@@ -11,7 +11,7 @@
       "changing": "Changing regulation",
       "prohibited": "Prohibited"
     },
-    "notes": "Test file using enriched schema for South American countries. For use in developing Feature 4 (country detail panel). Verify against source tracker before publication."
+    "notes": "Countries not listed have no data or unclassified status. The United Kingdom is subdivided by nation using ISO 3166-2 codes in the 'subdivisions' block. Fields left blank are awaiting data — please verify and populate before publication."
   },
   "countries": {
     "032": {
@@ -25,6 +25,39 @@
       "approach": "Product-based, case-by-case. Developers submit a dossier to CONABIA, which determines whether the product contains stable foreign DNA.",
       "further_reading_url": "https://cropgeregulations.com/argentinas-updated-approach-to-new-breeding-techniques/"
     },
+    "036": {
+      "name": "Australia",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "040": {
+      "name": "Austria",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "056": {
+      "name": "Belgium",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
     "076": {
       "name": "Brazil",
       "status": "distinct",
@@ -35,6 +68,39 @@
       "summary": "CTNBio established a framework for gene-edited crops through Normative Resolution No. 16 (RN16), issued 15 January 2018. RN16 defines 'Innovative Precision Improvement Techniques' (TIMPs) and allows developers to seek a determination on GMO classification. Products without recombinant DNA/RNA in the final product are eligible for non-GMO classification. In December 2024, MARA issued five biosafety certificates for gene-edited events, including the first gene-edited rice event approved for domestic cultivation.",
       "approach": "Product-based, consultation procedure. Products without recombinant DNA/RNA in the final product are classified as conventional.",
       "further_reading_url": "https://cropgeregulations.com/locations/south-america/"
+    },
+    "100": {
+      "name": "Bulgaria",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "854": {
+      "name": "Burkina Faso",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "124": {
+      "name": "Canada",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
     },
     "152": {
       "name": "Chile",
@@ -47,6 +113,17 @@
       "approach": "Informal case-by-case procedure pending formalisation. Based on whether product contains a new combination of genetic material.",
       "further_reading_url": "https://cropgeregulations.com/locations/south-america/"
     },
+    "156": {
+      "name": "China",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
     "170": {
       "name": "Colombia",
       "status": "distinct",
@@ -58,6 +135,61 @@
       "approach": "Product-based, case-by-case. Central criterion is presence or absence of stable foreign genetic material.",
       "further_reading_url": "https://cropgeregulations.com/locations/south-america/"
     },
+    "188": {
+      "name": "Costa Rica",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "191": {
+      "name": "Croatia",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "196": {
+      "name": "Cyprus",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "203": {
+      "name": "Czech Republic",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "208": {
+      "name": "Denmark",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
     "218": {
       "name": "Ecuador",
       "status": "distinct",
@@ -68,6 +200,402 @@
       "summary": "Ecuador operates within a constrained framework — Article 401 of the 2008 Constitution declares Ecuador a GMO-free country. However, Ministerial Agreement No. 063/2023 established that only organisms containing recombinant or foreign DNA qualify as GMOs, creating a definitional exemption for transgene-free gene-edited products. The first application under this framework was submitted in October 2024 for a gene-edited banana variety developed in response to Fusarium wilt TR4 pressure.",
       "approach": "Definitional exclusion. Transgene-free gene-edited products fall outside the GMO definition under the Organic Code of the Environment (2019), without overriding the constitutional prohibition.",
       "further_reading_url": "https://cropgeregulations.com/locations/south-america/"
+    },
+    "222": {
+      "name": "El Salvador",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "233": {
+      "name": "Estonia",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "231": {
+      "name": "Ethiopia",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "246": {
+      "name": "Finland",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "250": {
+      "name": "France",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "268": {
+      "name": "Georgia",
+      "status": "prohibited",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "276": {
+      "name": "Germany",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "288": {
+      "name": "Ghana",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "300": {
+      "name": "Greece",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "320": {
+      "name": "Guatemala",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "340": {
+      "name": "Honduras",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "348": {
+      "name": "Hungary",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "356": {
+      "name": "India",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "360": {
+      "name": "Indonesia",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "372": {
+      "name": "Ireland",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "376": {
+      "name": "Israel",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "380": {
+      "name": "Italy",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "392": {
+      "name": "Japan",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "404": {
+      "name": "Kenya",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "428": {
+      "name": "Latvia",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "438": {
+      "name": "Liechtenstein",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "440": {
+      "name": "Lithuania",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "442": {
+      "name": "Luxembourg",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "450": {
+      "name": "Madagascar",
+      "status": "prohibited",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "454": {
+      "name": "Malawi",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "458": {
+      "name": "Malaysia",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "470": {
+      "name": "Malta",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "480": {
+      "name": "Mauritius",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "484": {
+      "name": "Mexico",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "498": {
+      "name": "Moldova",
+      "status": "prohibited",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "508": {
+      "name": "Mozambique",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "528": {
+      "name": "Netherlands",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "554": {
+      "name": "New Zealand",
+      "status": "gm",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "558": {
+      "name": "Nicaragua",
+      "status": "gm",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "566": {
+      "name": "Nigeria",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "578": {
+      "name": "Norway",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
     },
     "600": {
       "name": "Paraguay",
@@ -91,6 +619,171 @@
       "approach": "Definitional exclusion operating within an active GMO moratorium. Transgene-free products may be classified as conventional under criteria established March 2026.",
       "further_reading_url": "https://cropgeregulations.com/locations/south-america/"
     },
+    "608": {
+      "name": "Philippines",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "616": {
+      "name": "Poland",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "620": {
+      "name": "Portugal",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "642": {
+      "name": "Romania",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "646": {
+      "name": "Rwanda",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "702": {
+      "name": "Singapore",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "703": {
+      "name": "Slovakia",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "705": {
+      "name": "Slovenia",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "710": {
+      "name": "South Africa",
+      "status": "gm",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "410": {
+      "name": "South Korea",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "724": {
+      "name": "Spain",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "752": {
+      "name": "Sweden",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "756": {
+      "name": "Switzerland",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "764": {
+      "name": "Thailand",
+      "status": "gm",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "800": {
+      "name": "Uganda",
+      "status": "changing",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
     "858": {
       "name": "Uruguay",
       "status": "distinct",
@@ -101,6 +794,85 @@
       "summary": "Uruguay established its gene editing regulatory framework through Decree 84/024, announced 18 March 2024, making it one of the more recent Latin American adopters. The decree established a Technical Working Group process to determine on a case-by-case basis whether a gene-edited product should be classified as a GMO, with the central criterion being the presence or absence of foreign DNA in the final product. Uruguay's framework is consistent with the broader regional convergence around the product-based foreign-DNA criterion that has emerged across Latin America since Argentina's 2015 decision.",
       "approach": "Product-based, case-by-case via Technical Working Group. Central criterion is presence or absence of foreign DNA.",
       "further_reading_url": "https://cropgeregulations.com/locations/south-america/"
+    },
+    "840": {
+      "name": "United States",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "704": {
+      "name": "Vietnam",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "894": {
+      "name": "Zambia",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    }
+  },
+  "subdivisions": {
+    "GB-ENG": {
+      "name": "England",
+      "status": "distinct",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "GB-SCT": {
+      "name": "Scotland",
+      "status": "gm",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "GB-WLS": {
+      "name": "Wales",
+      "status": "gm",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
+    },
+    "GB-NIR": {
+      "name": "Northern Ireland",
+      "status": "gm",
+      "legislation": "",
+      "legislation_url": "",
+      "year_established": null,
+      "regulatory_body": "",
+      "summary": "",
+      "approach": "",
+      "further_reading_url": ""
     }
   }
 }
