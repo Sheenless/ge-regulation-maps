@@ -112,10 +112,6 @@
     #map-container {
       position: relative;
       width: 100%;
-      --map-bg: #ffffff;
-    }
-    @media (prefers-color-scheme: dark) {
-      #map-container { --map-bg: #1a1a1a; }
     }
 
     #tooltip {
@@ -245,7 +241,6 @@
   <script>
 
     // ── Data sources ───────────────────────────────────────────────
-    const DATA_URL = 'ge-regulation-data.json';
     const TOPO_URL = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
 
     // UK nations GeoJSON from a stable public source (Natural Earth admin-1 via geojson.io mirror).
@@ -279,7 +274,7 @@
     // For world countries (looked up by numeric d.id)
     function getColor(numericId) {
       // UK sovereign (826): return a sentinel; fill is set directly on the element
-      if (numericId === 826) return 'var(--map-bg, #1a1a1a)';
+      if (String(numericId) === '826') return '#1a1a1a'; // hidden — nation overlay covers it
 
       const entry = geData[String(numericId).padStart(3, '0')];
       if (!entry) return COLOR_NO_DATA;
@@ -482,55 +477,35 @@
     }
 
     function applyHighlight() {
-      // Remove any previous highlight overlay path
-      d3.select('#highlight-overlay').remove();
+      // Remove any previous highlight overlay
+      if (window._mapG) window._mapG.select('#highlight-overlay').remove();
 
-      if (allCountryPaths) {
-        allCountryPaths
-          .attr('fill', d => getColor(d.id))
-          .classed('highlighted', false)
-          .style('stroke', d => d.id === 826 ? 'none' : null)
-          .style('stroke-width', null);
-      }
-      if (allNationPaths) {
-        allNationPaths
-          .attr('fill', d => getNationColor(d.properties.iso_code))
-          .classed('highlighted', false)
-          .style('stroke', null)
-          .style('stroke-width', null);
-      }
+      // Reset fills
+      if (allCountryPaths) allCountryPaths.attr('fill', d => getColor(d.id));
+      if (allNationPaths)  allNationPaths.attr('fill', d => getNationColor(d.properties.iso_code));
 
-      if (highlightedId === null) return;
+      if (highlightedId === null || !window._mapG) return;
 
-      if (typeof highlightedId === 'number' && allCountryPaths) {
-        // For regular countries: draw a highlight outline path on top of everything
-        // by cloning the path data into a new element in a top-level overlay group
-        const matched = allCountryPaths.filter(d => d.id === highlightedId);
-        if (!matched.empty()) {
-          const pathD = matched.attr('d');
-          const svg = d3.select('#map').select('g');
-          svg.append('path')
-            .attr('id', 'highlight-overlay')
-            .attr('d', pathD)
-            .attr('fill', 'none')
-            .attr('stroke', '#ffffff')
-            .attr('stroke-width', 0.6)
-            .attr('pointer-events', 'none');
-        }
-      } else if (typeof highlightedId === 'string' && allNationPaths) {
-        // For UK nations: same approach
-        const matched = allNationPaths.filter(d => d.properties.iso_code === highlightedId);
-        if (!matched.empty()) {
-          const pathD = matched.attr('d');
-          const svg = d3.select('#map').select('g');
-          svg.append('path')
-            .attr('id', 'highlight-overlay')
-            .attr('d', pathD)
-            .attr('fill', 'none')
-            .attr('stroke', '#ffffff')
-            .attr('stroke-width', 0.6)
-            .attr('pointer-events', 'none');
-        }
+      // Walk the SVG DOM — compare as strings since TopoJSON ids are strings
+      const mapNode = document.getElementById('map');
+      const allPaths = mapNode.querySelectorAll('path.country, path.uk-nation');
+      let targetPath = null;
+
+      allPaths.forEach(function(el) {
+        const d = el.__data__;
+        if (!d) return;
+        if (typeof highlightedId === 'number' && String(d.id) === String(highlightedId)) targetPath = el;
+        if (typeof highlightedId === 'string' && d.properties && d.properties.iso_code === highlightedId) targetPath = el;
+      });
+
+      if (targetPath) {
+        window._mapG.append('path')
+          .attr('id', 'highlight-overlay')
+          .attr('d', targetPath.getAttribute('d'))
+          .attr('fill', 'none')
+          .attr('stroke', '#00e5ff')
+          .attr('stroke-width', 0.2)
+          .attr('pointer-events', 'none');
       }
     }
 
@@ -564,16 +539,17 @@
       const countries = topojson.feature(world, world.objects.countries);
 
       const g = svg.append('g');
+      window._mapG = g;
 
-      // ── Layer 1: World countries ──
+      // ── Layer 1: World countries — UK sovereign (826) excluded; handled by overlay ──
       allCountryPaths = g.selectAll('path.country')
-        .data(countries.features)
+        .data(countries.features.filter(d => String(d.id) !== '826'))
         .join('path')
-        .attr('class', d => d.id === 826 ? 'country uk-sovereign' : 'country')
+        .attr('class', 'country')
         .attr('d', path)
         .attr('fill', d => getColor(d.id))
-        .attr('stroke', d => d.id === 826 ? 'none' : '#ffffff')
-        .attr('stroke-width', d => d.id === 826 ? 0 : 0.4)
+        .attr('stroke', '#ffffff')
+        .attr('stroke-width', 0.4)
         .style('cursor', 'default')
         .on('mousemove', function(event, d) {
           const html = getTooltipContent(d.id, d.properties.name || '');
@@ -599,16 +575,8 @@
           })
           .on('mouseleave', () => { tooltip.style.opacity = 0; });
       } else {
-        // Fallback: if UK overlay failed to load, render UK as a single
-        // entity using the sovereign entry (826) with a note in the tooltip.
-        console.warn('UK nations overlay unavailable; falling back to sovereign boundary.');
-        allCountryPaths.filter(d => d.id === 826)
-          .attr('fill', COLOR_NO_DATA)
-          .on('mousemove', function(event) {
-            showTooltip(event,
-              `<div class="tt-name">United Kingdom</div>
-               <div class="tt-status" style="color:#888">Nation-level data — see legend</div>`);
-          });
+        // Fallback: UK overlay unavailable — nothing to render for UK
+        console.warn('UK nations overlay unavailable.');
       }
 
       // ── Zoom ──
@@ -657,11 +625,8 @@
     // Coordinates below are simplified Natural Earth admin-1 polygons for
     // England, Scotland, Wales, and Northern Ireland.
     function buildUKNationsGeoJSON() {
-      // Rather than embedding full polygon coordinates (which would be thousands
-      // of vertices), we fetch from the Natural Earth / geoBoundaries CDN.
-      // The property 'iso_3166_2' in Natural Earth admin-1 holds the GB-* codes.
       return fetch('uk-nations.geojson')
-        .then(r => { if (!r.ok) throw new Error('UK nations GeoJSON not found'); return r.json(); })
+        .then(r => { if (!r.ok) throw new Error('uk-nations.geojson not found'); return r.json(); })
         .catch(err => {
           console.warn('Could not load UK nations GeoJSON:', err.message);
           return null;
@@ -673,6 +638,8 @@
     buildLegend();
     buildSearch();
 
+    const DATA_URL = 'ge-regulation-data.json';
+
     Promise.all([
       fetch(DATA_URL).then(r => r.json()),
       d3.json(TOPO_URL)
@@ -681,8 +648,6 @@
       subdivData = dataJson.subdivisions  || {};
       renderLastUpdated((dataJson._metadata || {}).last_updated);
 
-      // Fetch UK overlay after geData/subdivData are populated
-      // (filter inside buildUKNationsGeoJSON uses subdivData)
       return buildUKNationsGeoJSON().then(ukGeoJSON => {
         buildMap(world, ukGeoJSON);
       });
