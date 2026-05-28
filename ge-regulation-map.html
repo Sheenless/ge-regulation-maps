@@ -170,17 +170,16 @@
     .source-note a { color: #999; }
 
     path.country      { transition: opacity 0.15s, stroke-width 0.15s; }
-    path.country.uk-sovereign { stroke: none !important; fill: none !important; pointer-events: none; }
     path.country:hover { opacity: 0.75; }
+    path.country.uk-sovereign { stroke: none !important; fill: none !important; pointer-events: none !important; opacity: 0 !important; }
     path.uk-nation    { transition: opacity 0.15s, stroke-width 0.15s; }
     path.uk-nation:hover { opacity: 0.75; }
 
     path.country.highlighted,
     path.uk-nation.highlighted {
-      stroke: #00e5ff !important;
-      stroke-width: 0.8px !important;
+      stroke: #ffffff !important;
+      stroke-width: 0.6px !important;
       opacity: 1 !important;
-      filter: drop-shadow(0 0 3px rgba(0, 229, 255, 0.6));
     }
 
     /* ── Dark mode ── */
