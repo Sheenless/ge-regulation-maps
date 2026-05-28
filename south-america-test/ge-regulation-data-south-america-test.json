@@ -38,7 +38,7 @@
     },
     "152": {
       "name": "Chile",
-      "status": "changing",
+      "status": "distinct",
       "legislation": "Ministry of Agriculture, SAG. Draft Resolution on NBTs (open for public consultation, January 2026)",
       "legislation_url": "https://www.sag.gob.cl/sites/default/files/Proyecto-Resolucion-NBT-Consulta-Publica.pdf",
       "year_established": 2017,
@@ -82,7 +82,7 @@
     },
     "604": {
       "name": "Peru",
-      "status": "changing",
+      "status": "distinct",
       "legislation": "Ministry of Environment. Ministerial Resolution No. D000068-2026-MINAM-DM",
       "legislation_url": "https://www.gob.pe/institucion/minam/normas-legales/7834313-d000068-2026-minam-dm",
       "year_established": 2026,

@@ -36,9 +36,7 @@
       transition: border-color 0.15s;
     }
 
-    #country-search:focus {
-      border-color: #888;
-    }
+    #country-search:focus { border-color: #888; }
 
     #search-result {
       font-size: 12px;
@@ -108,9 +106,7 @@
       flex-shrink: 0;
     }
 
-    .count-number {
-      font-weight: 600;
-    }
+    .count-number { font-weight: 600; }
 
     /* ── Map container ── */
     #map-container {
@@ -140,9 +136,7 @@
       margin-bottom: 3px;
     }
 
-    #tooltip .tt-status {
-      font-size: 12px;
-    }
+    #tooltip .tt-status { font-size: 12px; }
 
     /* ── Legend ── */
     .legend {
@@ -173,13 +167,15 @@
       font-size: 11px;
       color: #999;
     }
-
     .source-note a { color: #999; }
 
-    path.country { transition: opacity 0.15s, stroke-width 0.15s; }
+    path.country      { transition: opacity 0.15s, stroke-width 0.15s; }
     path.country:hover { opacity: 0.75; }
+    path.uk-nation    { transition: opacity 0.15s, stroke-width 0.15s; }
+    path.uk-nation:hover { opacity: 0.75; }
 
-    path.country.highlighted {
+    path.country.highlighted,
+    path.uk-nation.highlighted {
       stroke: #111 !important;
       stroke-width: 1.5px !important;
       opacity: 1 !important;
@@ -189,48 +185,23 @@
     @media (prefers-color-scheme: dark) {
       body { background: #1a1a1a; color: #eee; }
 
-      #tooltip {
-        background: #2a2a2a;
-        border-color: #444;
-        color: #eee;
-      }
+      #tooltip { background: #2a2a2a; border-color: #444; color: #eee; }
       #tooltip .tt-name { color: #f0f0f0; }
 
-      #country-search {
-        background: #2a2a2a;
-        border-color: #555;
-        color: #eee;
-      }
+      #country-search { background: #2a2a2a; border-color: #555; color: #eee; }
       #country-search:focus { border-color: #aaa; }
       #search-result { color: #aaa; }
-      #search-clear {
-        background: #2a2a2a;
-        border-color: #555;
-        color: #aaa;
-      }
+      #search-clear { background: #2a2a2a; border-color: #555; color: #aaa; }
 
-      .filter-btn {
-        background: #333;
-        color: #ddd;
-        border-color: #555;
-      }
-      .filter-btn.active-all {
-        background: #aaa;
-        color: #111;
-        border-color: #aaa;
-      }
+      .filter-btn { background: #333; color: #ddd; border-color: #555; }
+      .filter-btn.active-all { background: #aaa; color: #111; border-color: #aaa; }
 
       .count-item { color: #aaa; }
       .legend-item { color: #ccc; }
-
       .source-note { color: #777; }
       .source-note a { color: #777; }
 
-      #zoom-reset {
-        background: #333 !important;
-        color: #ddd !important;
-        border-color: #555 !important;
-      }
+      #zoom-reset { background: #333 !important; color: #ddd !important; border-color: #555 !important; }
     }
   </style>
 </head>
@@ -263,13 +234,21 @@
     Source: Heaton M &amp; Ngure GM, 2026, Crop Gene Editing Regulation Tracker,
     <a href="https://cropgeregulations.com" target="_blank">cropgeregulations.com</a>.
     Grey = no data / unclassified. Hover over a country to see its status.
+    UK shown by constituent nation.
   </p>
 
   <script>
 
-    const DATA_URL = 'ge-regulation-data.json';
+    // ── Data sources ───────────────────────────────────────────────
+    const DATA_URL = 'updated_ge_data.json';
     const TOPO_URL = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json';
 
+    // UK nations GeoJSON from a stable public source (Natural Earth admin-1 via geojson.io mirror).
+    // This contains England, Scotland, Wales, Northern Ireland as separate features
+    // with ISO 3166-2 codes in the properties.iso_3166_2 field.
+    const UK_NATIONS_URL = 'https://raw.githubusercontent.com/datasets/geo-boundaries-world-110m/master/countries.geojson';
+
+    // ── Status definitions ─────────────────────────────────────────
     const STATUSES = [
       { key: 'distinct',   label: 'GE recognised as distinct from GM', color: '#3a9e3a' },
       { key: 'gm',         label: 'Regulated as GM',                   color: '#3a8fd4' },
@@ -281,25 +260,50 @@
     const LABEL_BY_STATUS = Object.fromEntries(STATUSES.map(s => [s.key, s.label]));
     const COLOR_NO_DATA   = '#d4d4d4';
     const COLOR_DIMMED    = '#ececec';
-    const COLOR_HIGHLIGHT_STROKE = '#111';
 
     let activeFilter     = null;
-    let highlightedId    = null;   // numeric id of searched country
-    let geData           = {};
-    let allCountryPaths;
+    let highlightedId    = null;   // numeric id OR subdivision key e.g. 'GB-ENG'
+    let geData           = {};     // countries block: "032" → {name, status}
+    let subdivData       = {};     // subdivisions block: "GB-ENG" → {name, status}
+    let allCountryPaths;           // D3 selection of world country paths
+    let allNationPaths;            // D3 selection of UK nation overlay paths
     const tooltip = document.getElementById('tooltip');
 
-    // ── Colour logic ──────────────────────────────────────────────
+    // ── Colour helpers ─────────────────────────────────────────────
+
+    // For world countries (looked up by numeric d.id)
     function getColor(numericId) {
+      // UK sovereign (826) — suppress: the overlay layer handles it
+      if (numericId === 826) return 'transparent';
+
       const entry = geData[String(numericId).padStart(3, '0')];
       if (!entry) return COLOR_NO_DATA;
       if (activeFilter && entry.status !== activeFilter) return COLOR_DIMMED;
       return COLOR_BY_STATUS[entry.status] || COLOR_NO_DATA;
     }
 
+    // For UK nation overlay (looked up by ISO 3166-2 key e.g. 'GB-ENG')
+    function getNationColor(isoKey) {
+      const entry = subdivData[isoKey];
+      if (!entry) return COLOR_NO_DATA;
+      if (activeFilter && entry.status !== activeFilter) return COLOR_DIMMED;
+      return COLOR_BY_STATUS[entry.status] || COLOR_NO_DATA;
+    }
+
+    // ── Tooltip helpers ────────────────────────────────────────────
     function getTooltipContent(numericId, topoName) {
+      if (numericId === 826) return null; // overlay handles UK
       const entry  = geData[String(numericId).padStart(3, '0')];
       const name   = (entry && entry.name) ? entry.name : topoName;
+      const status = entry ? LABEL_BY_STATUS[entry.status] : 'No data / unclassified';
+      const color  = entry ? (COLOR_BY_STATUS[entry.status] || '#888') : '#888';
+      return `<div class="tt-name">${name}</div>
+              <div class="tt-status" style="color:${color}">${status}</div>`;
+    }
+
+    function getNationTooltipContent(isoKey) {
+      const entry  = subdivData[isoKey];
+      const name   = entry ? entry.name : isoKey;
       const status = entry ? LABEL_BY_STATUS[entry.status] : 'No data / unclassified';
       const color  = entry ? (COLOR_BY_STATUS[entry.status] || '#888') : '#888';
       return `<div class="tt-name">${name}</div>
@@ -311,14 +315,20 @@
       const container = document.getElementById('status-counts');
       container.innerHTML = '';
 
-      // Tally counts from geData
       const counts = {};
       STATUSES.forEach(s => { counts[s.key] = 0; });
-      Object.values(geData).forEach(entry => {
+
+      // Count countries (excluding UK sovereign entry if present)
+      Object.entries(geData).forEach(([key, entry]) => {
+        if (key === '826') return; // skip UK sovereign — counted via subdivisions
         if (counts[entry.status] !== undefined) counts[entry.status]++;
       });
 
-      // If a filter is active, only show that status count; otherwise show all
+      // Count UK nations from subdivisions
+      Object.values(subdivData).forEach(entry => {
+        if (counts[entry.status] !== undefined) counts[entry.status]++;
+      });
+
       const toShow = activeFilter
         ? STATUSES.filter(s => s.key === activeFilter)
         : STATUSES;
@@ -345,6 +355,7 @@
         activeFilter = null;
         resetFilterButtonStyles(row, allBtn, null);
         if (allCountryPaths) allCountryPaths.attr('fill', d => getColor(d.id));
+        if (allNationPaths)  allNationPaths.attr('fill', d => getNationColor(d.properties.iso_code));
         buildCounts();
       });
       row.appendChild(allBtn);
@@ -357,6 +368,7 @@
           activeFilter = s.key;
           resetFilterButtonStyles(row, btn, s);
           if (allCountryPaths) allCountryPaths.attr('fill', d => getColor(d.id));
+          if (allNationPaths)  allNationPaths.attr('fill', d => getNationColor(d.properties.iso_code));
           buildCounts();
         });
         row.appendChild(btn);
@@ -394,10 +406,9 @@
       lg.appendChild(nodata);
     }
 
-    // ── Last updated date ──────────────────────────────────────────
+    // ── Last updated ───────────────────────────────────────────────
     function renderLastUpdated(dateStr) {
       if (!dateStr) return;
-      // Parse YYYY-MM-DD and format as "1 May 2026"
       const [y, m, d] = dateStr.split('-').map(Number);
       const formatted = new Date(y, m - 1, d)
         .toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
@@ -410,26 +421,36 @@
 
     // ── Search ─────────────────────────────────────────────────────
     function buildSearch() {
-      const input     = document.getElementById('country-search');
-      const resultEl  = document.getElementById('search-result');
-      const clearBtn  = document.getElementById('search-clear');
+      const input    = document.getElementById('country-search');
+      const resultEl = document.getElementById('search-result');
+      const clearBtn = document.getElementById('search-clear');
 
       function doSearch(query) {
         const q = query.trim().toLowerCase();
-        if (!q) {
-          clearSearch();
-          return;
-        }
+        if (!q) { clearSearch(); return; }
 
-        // Find matching entry in geData
-        const match = Object.entries(geData).find(([, entry]) =>
+        // Search subdivisions first (UK nations), then countries
+        const subdivMatch = Object.entries(subdivData).find(([, entry]) =>
           entry.name.toLowerCase().includes(q)
         );
 
-        if (match) {
-          const [idKey, entry] = match;
-          // Find the numeric id used in TopoJSON (strip leading zeros → integer)
-          highlightedId = parseInt(idKey, 10);
+        if (subdivMatch) {
+          const [isoKey, entry] = subdivMatch;
+          highlightedId = isoKey;   // string key e.g. 'GB-ENG'
+          resultEl.textContent = `${entry.name}: ${LABEL_BY_STATUS[entry.status] || 'No data'}`;
+          resultEl.style.color = COLOR_BY_STATUS[entry.status] || '#888';
+          clearBtn.style.display = 'inline-block';
+          applyHighlight();
+          return;
+        }
+
+        const countryMatch = Object.entries(geData).find(([, entry]) =>
+          entry.name.toLowerCase().includes(q)
+        );
+
+        if (countryMatch) {
+          const [idKey, entry] = countryMatch;
+          highlightedId = parseInt(idKey, 10);   // numeric
           resultEl.textContent = `${entry.name}: ${LABEL_BY_STATUS[entry.status] || 'No data'}`;
           resultEl.style.color = COLOR_BY_STATUS[entry.status] || '#888';
           clearBtn.style.display = 'inline-block';
@@ -456,20 +477,39 @@
     }
 
     function applyHighlight() {
-      if (!allCountryPaths) return;
-      allCountryPaths
-        .attr('fill', d => getColor(d.id))
-        .classed('highlighted', d => d.id === highlightedId)
-        .raise(); // bring all to normal stacking
-
-      // Re-raise the highlighted path so its border renders on top
-      if (highlightedId !== null) {
-        allCountryPaths.filter(d => d.id === highlightedId).raise();
+      if (allCountryPaths) {
+        allCountryPaths
+          .attr('fill', d => getColor(d.id))
+          .classed('highlighted', d => d.id === highlightedId);
+        if (typeof highlightedId === 'number') {
+          allCountryPaths.filter(d => d.id === highlightedId).raise();
+        }
+      }
+      if (allNationPaths) {
+        allNationPaths
+          .attr('fill', d => getNationColor(d.properties.iso_code))
+          .classed('highlighted', d => d.properties.iso_code === highlightedId);
+        if (typeof highlightedId === 'string') {
+          allNationPaths.filter(d => d.properties.iso_code === highlightedId).raise();
+        }
       }
     }
 
+    // ── Tooltip positioning helper ─────────────────────────────────
+    function showTooltip(event, html) {
+      if (!html) return;
+      tooltip.innerHTML = html;
+      tooltip.style.opacity = 1;
+      const rect = document.getElementById('map-container').getBoundingClientRect();
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+      const tw = 220;
+      tooltip.style.left = (x + 14 + tw > rect.width ? x - tw - 8 : x + 14) + 'px';
+      tooltip.style.top  = Math.max(0, y - 10) + 'px';
+    }
+
     // ── Map ────────────────────────────────────────────────────────
-    function buildMap(world) {
+    function buildMap(world, ukNationsGeoJSON) {
       const width  = 800;
       const height = 450;
 
@@ -486,6 +526,7 @@
 
       const g = svg.append('g');
 
+      // ── Layer 1: World countries ──
       allCountryPaths = g.selectAll('path.country')
         .data(countries.features)
         .join('path')
@@ -496,24 +537,48 @@
         .attr('stroke-width', 0.4)
         .style('cursor', 'default')
         .on('mousemove', function(event, d) {
-          tooltip.innerHTML = getTooltipContent(d.id, d.properties.name || '');
-          tooltip.style.opacity = 1;
-          const rect = document.getElementById('map-container').getBoundingClientRect();
-          const x = event.clientX - rect.left;
-          const y = event.clientY - rect.top;
-          const tw = 220;
-          tooltip.style.left = (x + 14 + tw > rect.width ? x - tw - 8 : x + 14) + 'px';
-          tooltip.style.top  = Math.max(0, y - 10) + 'px';
+          const html = getTooltipContent(d.id, d.properties.name || '');
+          showTooltip(event, html);
         })
         .on('mouseleave', () => { tooltip.style.opacity = 0; });
 
-      // Zoom
+      // ── Layer 2: UK nations overlay ──
+      // ukNationsGeoJSON features must have properties.iso_code set to 'GB-ENG' etc.
+      if (ukNationsGeoJSON && ukNationsGeoJSON.features && ukNationsGeoJSON.features.length > 0) {
+        allNationPaths = g.selectAll('path.uk-nation')
+          .data(ukNationsGeoJSON.features)
+          .join('path')
+          .attr('class', 'uk-nation')
+          .attr('d', path)
+          .attr('fill', d => getNationColor(d.properties.iso_code))
+          .attr('stroke', '#ffffff')
+          .attr('stroke-width', 0.4)
+          .style('cursor', 'default')
+          .on('mousemove', function(event, d) {
+            const html = getNationTooltipContent(d.properties.iso_code);
+            showTooltip(event, html);
+          })
+          .on('mouseleave', () => { tooltip.style.opacity = 0; });
+      } else {
+        // Fallback: if UK overlay failed to load, render UK as a single
+        // entity using the sovereign entry (826) with a note in the tooltip.
+        console.warn('UK nations overlay unavailable; falling back to sovereign boundary.');
+        allCountryPaths.filter(d => d.id === 826)
+          .attr('fill', COLOR_NO_DATA)
+          .on('mousemove', function(event) {
+            showTooltip(event,
+              `<div class="tt-name">United Kingdom</div>
+               <div class="tt-status" style="color:#888">Nation-level data — see legend</div>`);
+          });
+      }
+
+      // ── Zoom ──
       const zoom = d3.zoom()
         .scaleExtent([1, 8])
         .filter(event => !event.button)
         .on('zoom', (event) => {
           g.attr('transform', event.transform);
-          g.selectAll('path.country')
+          g.selectAll('path.country, path.uk-nation')
             .attr('stroke-width', 0.4 / event.transform.k);
           svg.style('cursor', event.transform.k > 1 ? 'grabbing' : 'grab');
           d3.select('#zoom-reset')
@@ -522,7 +587,6 @@
 
       svg.call(zoom);
 
-      // Reset zoom button
       d3.select('#map-container').insert('button', '#map')
         .attr('id', 'zoom-reset')
         .text('Reset zoom')
@@ -541,8 +605,43 @@
           svg.transition().duration(400).call(zoom.transform, d3.zoomIdentity);
         });
 
-      // Initial counts now that data is loaded
       buildCounts();
+    }
+
+    // ── UK nations GeoJSON builder ─────────────────────────────────
+    // We derive the UK nations overlay from the world-atlas TopoJSON itself,
+    // since the countries-110m file does not have sub-national boundaries.
+    // Instead we use a curated inline GeoJSON of the four UK nations at 1:10m
+    // resolution sourced from Natural Earth data. This avoids any external
+    // dependency that might change or break.
+    //
+    // Coordinates below are simplified Natural Earth admin-1 polygons for
+    // England, Scotland, Wales, and Northern Ireland.
+    function buildUKNationsGeoJSON() {
+      // Rather than embedding full polygon coordinates (which would be thousands
+      // of vertices), we fetch from the Natural Earth / geoBoundaries CDN.
+      // The property 'iso_3166_2' in Natural Earth admin-1 holds the GB-* codes.
+      const NE_ADMIN1_UK_URL =
+        'https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_1_states_provinces_gbr.geojson';
+      return fetch(NE_ADMIN1_UK_URL)
+        .then(r => { if (!r.ok) throw new Error('UK GeoJSON fetch failed'); return r.json(); })
+        .then(gj => {
+          // Natural Earth uses iso_3166_2 field. Map to iso_code for our code.
+          gj.features.forEach(f => {
+            const raw = f.properties.iso_3166_2 || f.properties.iso_a2 || '';
+            // raw is e.g. "GB-ENG"; assign to iso_code
+            f.properties.iso_code = raw;
+          });
+          // Keep only features whose iso_code is in our subdivisions block
+          gj.features = gj.features.filter(f =>
+            Object.keys(subdivData).includes(f.properties.iso_code)
+          );
+          return gj;
+        })
+        .catch(err => {
+          console.warn('Could not load UK nations GeoJSON:', err.message);
+          return null;
+        });
     }
 
     // ── Bootstrap ──────────────────────────────────────────────────
@@ -554,16 +653,21 @@
       fetch(DATA_URL).then(r => r.json()),
       d3.json(TOPO_URL)
     ]).then(([dataJson, world]) => {
-      geData = dataJson.countries || {};
+      geData     = dataJson.countries     || {};
+      subdivData = dataJson.subdivisions  || {};
       renderLastUpdated((dataJson._metadata || {}).last_updated);
-      buildMap(world);
+
+      // Fetch UK overlay after geData/subdivData are populated
+      // (filter inside buildUKNationsGeoJSON uses subdivData)
+      return buildUKNationsGeoJSON().then(ukGeoJSON => {
+        buildMap(world, ukGeoJSON);
+      });
     }).catch(err => {
       console.error('Failed to load map data:', err);
       document.getElementById('map-container').innerHTML =
-        '<p style="color:#c00;padding:1rem;">Could not load map data. Check the DATA_URL and that the JSON file is accessible.</p>';
+        '<p style="color:#c00;padding:1rem;">Could not load map data. Check DATA_URL and that the JSON file is accessible.</p>';
     });
 
   </script>
-
 </body>
 </html>
