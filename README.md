@@ -1,4 +1,4 @@
-# Interaction crop gene editing regulations tracker
+# Crop gene editing regulations tracker
 
 Gene editing regulations are changing globally and are often difficult to keep track of. While there is a rich publication on these changes, publications the rate of change means that these resources are quickly out of date.
 
