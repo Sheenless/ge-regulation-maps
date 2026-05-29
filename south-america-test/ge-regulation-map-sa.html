@@ -82,6 +82,19 @@
       border-color: #444;
     }
 
+    /* ── Download button ── */
+    #download-btn {
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      border: 1.5px solid #ccc;
+      background: #f5f5f5;
+      color: #555;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    #download-btn:hover { opacity: 0.8; }
+
     /* ── Status counts bar ── */
     #status-counts {
       display: flex;
@@ -330,6 +343,7 @@
       .source-note a { color: #777; }
 
       #zoom-reset { background: #333 !important; color: #ddd !important; border-color: #555 !important; }
+      #download-btn { background: #2a2a2a; border-color: #555; color: #aaa; }
     }
   </style>
 </head>
@@ -344,6 +358,11 @@
 
   <!-- Filter buttons -->
   <div class="filter-row" id="filter-row"></div>
+
+  <!-- Download -->
+  <div style="display:flex; justify-content:flex-end; margin-bottom:6px;">
+    <button id="download-btn">&#8595; Download CSV</button>
+  </div>
 
   <!-- Status counts -->
   <div id="status-counts"></div>
@@ -865,11 +884,75 @@
         });
     }
 
+    // ── CSV download ───────────────────────────────────────────────
+    function downloadCSV() {
+      const cols = [
+        'name', 'iso_code', 'type', 'status', 'status_label',
+        'regulatory_body', 'year_established', 'legislation',
+        'legislation_url', 'approach', 'further_reading_url'
+      ];
+
+      function esc(val) {
+        if (val === null || val === undefined) return '';
+        const s = String(val);
+        return (s.includes(',') || s.includes('"') || s.includes('\n'))
+          ? '"' + s.replace(/"/g, '""') + '"'
+          : s;
+      }
+
+      const rows = [cols.join(',')];
+
+      Object.entries(geData).forEach(([isoNum, entry]) => {
+        if (isoNum === '826') return;
+        rows.push([
+          esc(entry.name),
+          esc(isoNum),
+          esc('country'),
+          esc(entry.status),
+          esc(LABEL_BY_STATUS[entry.status] || ''),
+          esc(entry.regulatory_body || ''),
+          esc(entry.year_established || ''),
+          esc(entry.legislation || ''),
+          esc(entry.legislation_url || ''),
+          esc(entry.approach || ''),
+          esc(entry.further_reading_url || ''),
+        ].join(','));
+      });
+
+      Object.entries(subdivData).forEach(([isoKey, entry]) => {
+        rows.push([
+          esc(entry.name),
+          esc(isoKey),
+          esc('subdivision'),
+          esc(entry.status),
+          esc(LABEL_BY_STATUS[entry.status] || ''),
+          esc(entry.regulatory_body || ''),
+          esc(entry.year_established || ''),
+          esc(entry.legislation || ''),
+          esc(entry.legislation_url || ''),
+          esc(entry.approach || ''),
+          esc(entry.further_reading_url || ''),
+        ].join(','));
+      });
+
+      const csv  = rows.join('\n');
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url  = URL.createObjectURL(blob);
+      const a    = document.createElement('a');
+      a.href     = url;
+      a.download = 'ge-regulation-data.csv';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
     // ── Bootstrap ──────────────────────────────────────────────────
     buildFilters();
     buildLegend();
     buildSearch();
     document.getElementById('detail-close').addEventListener('click', closeDetailPanel);
+    document.getElementById('download-btn').addEventListener('click', downloadCSV);
 
     const DATA_URL = 'ge-regulation-data-south-america-test.json';
 
