@@ -1,9 +1,9 @@
 {
   "_metadata": {
     "title": "Crop Gene Editing Regulation Status by Country",
-    "source": "Heaton M & Ngure GM, 2026, Crop Gene Editing Regulation Tracker",
+    "source": "Heaton M, Ngure GM & Daujotaite, 2026, Crop Gene Editing Regulation Tracker",
     "url": "https://cropgeregulations.com",
-    "last_updated": "2026-05-18",
+    "last_updated": "2026-06-08",
     "key_type": "ISO 3166-1 numeric",
     "statuses": {
       "distinct": "GE recognised as distinct from GM",
@@ -28,35 +28,35 @@
     "036": {
       "name": "Australia",
       "status": "distinct",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
+      "legislation": "Australian government, department of health, office of the Gene Technology Regulator",
+      "legislation_url": "https://www.legislation.gov.au/F2001B00162/latest/text",
+      "year_established": 2019,
+      "regulatory_body": "Food Standards Australia New Zealand (FANZ) and Gene Technology Regulator (GTR)",
+      "summary": "SDN-1 organisms are exempt from being regulated as GMOs under the Gene Technology Act 2000. in 2025, FANZ updated the definitions of 'novel DNA' and 'novel food' to allow outcome-based evaluation, meaning transgene-free GEd crops no longer classify as GM food.",
       "approach": "",
-      "further_reading_url": ""
+      "further_reading_url": "https://cropgeregulations.com/new-ge-regulatory-overview-report/"
     },
     "040": {
       "name": "Austria",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "056": {
       "name": "Belgium",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "076": {
       "name": "Brazil",
@@ -72,13 +72,13 @@
     "100": {
       "name": "Bulgaria",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "854": {
       "name": "Burkina Faso",
@@ -94,9 +94,9 @@
     "124": {
       "name": "Canada",
       "status": "distinct",
-      "legislation": "",
+      "legislation": "Canada's novel food regulations 1999. Guideline update 2022",
       "legislation_url": "",
-      "year_established": null,
+      "year_established": 1999,
       "regulatory_body": "",
       "summary": "",
       "approach": "",
@@ -149,46 +149,46 @@
     "191": {
       "name": "Croatia",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "196": {
       "name": "Cyprus",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "203": {
       "name": "Czech Republic",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "208": {
       "name": "Denmark",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "218": {
       "name": "Ecuador",
@@ -215,13 +215,13 @@
     "233": {
       "name": "Estonia",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "231": {
       "name": "Ethiopia",
@@ -237,24 +237,24 @@
     "246": {
       "name": "Finland",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "250": {
       "name": "France",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "268": {
       "name": "Georgia",
@@ -270,13 +270,13 @@
     "276": {
       "name": "Germany",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "288": {
       "name": "Ghana",
@@ -292,13 +292,13 @@
     "300": {
       "name": "Greece",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "320": {
       "name": "Guatemala",
@@ -325,13 +325,13 @@
     "348": {
       "name": "Hungary",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "356": {
       "name": "India",
@@ -358,13 +358,13 @@
     "372": {
       "name": "Ireland",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "376": {
       "name": "Israel",
@@ -380,13 +380,13 @@
     "380": {
       "name": "Italy",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "392": {
       "name": "Japan",
@@ -413,13 +413,13 @@
     "428": {
       "name": "Latvia",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "438": {
       "name": "Liechtenstein",
@@ -435,24 +435,24 @@
     "440": {
       "name": "Lithuania",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "442": {
       "name": "Luxembourg",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "450": {
       "name": "Madagascar",
@@ -490,13 +490,13 @@
     "470": {
       "name": "Malta",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "480": {
       "name": "Mauritius",
@@ -545,13 +545,13 @@
     "528": {
       "name": "Netherlands",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "554": {
       "name": "New Zealand",
@@ -633,35 +633,35 @@
     "616": {
       "name": "Poland",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "620": {
       "name": "Portugal",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "642": {
       "name": "Romania",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "646": {
       "name": "Rwanda",
@@ -688,24 +688,24 @@
     "703": {
       "name": "Slovakia",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "705": {
       "name": "Slovenia",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "710": {
       "name": "South Africa",
@@ -732,24 +732,24 @@
     "724": {
       "name": "Spain",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "752": {
       "name": "Sweden",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "The European Commission and the Council of the European Union. Regulation (EC) No 1829/2003 (CJEU ruling (C-528/16))",
+      "legislation_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex:62016CJ0528",
+      "year_established": 2018,
+      "regulatory_body": "European Food Safety Authority (EFSA)",
+      "summary": "The EU has declared a provisional agreement that allows the 'contained use' of 'genetically modified micro-organisms', which are comparable to products of conventional breeding or mutagenesis. Two types of New Genomic Techniques (NGT's) have been approved, with NGT-2 being regulated the same as GMO's. NGT-1 however has been deregulated from the 2001/18/EC legislation on GMO's. NGT-1 plants are regulated equivalent to conventional plants, and no labelling for them will be required, with some exceptions",
+      "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
+      "further_reading_url": "https://www.consilium.europa.eu/en/press/press-releases/2025/12/04/new-genomic-techniques-council-and-parliament-strike-deal-to-boost-the-competitiveness-and-sustainability-of-our-food-systems/ https://academic.oup.com/jlb/article/9/1/lsab033/6513430?login=false https://easac.eu/fileadmin/PDF_s/reports_statements/Genome_Editing/EASAC_Genome-Edited_Plants_Web.pdf  "
     },
     "756": {
       "name": "Switzerland",
@@ -833,46 +833,46 @@
     "GB-ENG": {
       "name": "England",
       "status": "distinct",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "GOV UK",
+      "legislation_url": "https://www.legislation.gov.uk/ukpga/2023/6/contents",
+      "year_established": 2023,
+      "regulatory_body": "Department for Environment, Food and Rural Affairs (DEFRA)",
+      "summary": "England passed the Precision Breeding Act in 2023, which declared deregulation of Gene edited crops from GMOs. As of 2025, the second legislations allowed Precision Bred Organisms (PBOs) to be commercialised alongside conventionally bred crops.",
+      "approach": "Product-based, case-by-case. Marketing applications for Precision Bred Organisms (PBOs) can be put forward and are dealt by DEFRA and the Food Standards Agency (FSA)",
+      "further_reading_url": "https://www.jic.ac.uk/about-us/our-position-on/genetic-technologies/using-genetic-technologies-in-plant-and-microbial-science/precision-breeding-and-gene-editing-where-are-we-and-whats-next/module-1-the-precision-breeding-act/"
     },
     "GB-SCT": {
       "name": "Scotland",
       "status": "gm",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "Scottish Government, Agriculture and Rural Economy Directorate",
+      "legislation_url": "https://www.gov.scot/policies/agriculture-and-the-environment/gm-crops/",
+      "year_established": 2004,
+      "regulatory_body": "Science and Advice for Scottish Agriculture (SASA)",
+      "summary": "Unlike England, Scotland has blocked the application of the Precision Breeding Bill. The Scottish goverment indicates that they will follow EU decisions on such legislation changes.",
+      "approach": "precautionary, case-by-case approach where the scale of release is related to the level of risk. a GMO or a food product dervied from a GMO can only be put on the market in Scotland after it has been authorised on the basis of a detailed procedure based on a scientific assessment of the risks to health and the environment ",
+      "further_reading_url": "https://commonslibrary.parliament.uk/research-briefings/cbp-9557/ https://www.gov.scot/publications/genetic-technologies-precision-breeding-bill-letter-to-uk-government/ https://www.gov.scot/policies/agriculture-and-the-environment/gm-crops/"
     },
     "GB-WLS": {
       "name": "Wales",
       "status": "gm",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "Senedd Cymrus. Legislation, Justice and Constitution Committee",
+      "legislation_url": "https://senedd.wales/media/yh3dmqgk/lcm-ld15526-e.pdf",
+      "year_established": 2004,
+      "regulatory_body": "Food Standards Agency (FSA) and European Food Safety Authority (EFSA)",
+      "summary": "Unlike England, Wales decided to not apply the Precision Breeding Act. This is due to concern that the UK government did not work with the Welsh government until the Bill's first reading, therefore lacking consideration on the Bill's impacts on Wales, among other reasons. Instead, Wales still consider gene editing as a form of genetic modification, in line with the European Court of Justice ruling in 2018.",
+      "approach": "Case-by-case, product-based approach. Formal authorization needs to be acquired at the EU level to ensure that foods do not present a risk to health",
+      "further_reading_url": "https://senedd.wales/media/yh3dmqgk/lcm-ld15526-e.pdf, https://stuff.coffeecode.net/www.loc.gov/law/help/restrictions-on-gmos/england-wales.php"
     },
     "GB-NIR": {
       "name": "Northern Ireland",
       "status": "gm",
-      "legislation": "",
-      "legislation_url": "",
-      "year_established": null,
-      "regulatory_body": "",
-      "summary": "",
-      "approach": "",
-      "further_reading_url": ""
+      "legislation": "the Department of Agriculture and Rural development (DARD), Department of Agriculture, Environment and Rural Affairs (DAERA)",
+      "legislation_url": "https://www.legislation.gov.uk/nisr/2004/385/contents/made",
+      "year_established": 2004,
+      "regulatory_body": "Health and Safety Executive for Northern Ireland (HSENI) and the Department of the Environment",
+      "summary": "Despite not allowing the Precision Breeding Bill to be enacted, Northern Ireland present an unclear position towards their regulatory status. Curerntly, they still consider gene editing as a form of genetic modification, in line with the European Court of Justice ruling in 2018.",
+      "approach": "case-by-case, product-based. Formal authorization needs to be acquired at the EU level to ensure that foods do not present a risk to health ",
+      "further_reading_url": "https://www.netregs.org.uk/environmental-topics/materials-fuels-and-equipment/pathogens-from-laboratories-and-production-facilities/working-with-genetically-modified-organisms-gmos/, https://www.gov.uk/guidance/developing-genetically-modified-organisms"
     }
   }
 }
