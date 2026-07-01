@@ -96,7 +96,7 @@
       "status": "distinct",
       "legislation": "Health Canada, Guidance on Products of Plant Breeding (Novel Food Regulations, Division 28). CFIA Guidelines 2022",
       "legislation_url": "https://www.canada.ca/en/health-canada/services/food-nutrition/genetically-modified-foods-other-novel-foods/scientific-opinion-regulation-gene-edited-plant-products-within-context-division-28-food-drug-regulations.html",
-      "year_established": 1999,
+      "year_established": 2022,
       "regulatory_body": "Health Canada and Canadian Food Inspection Agency (CFIA)",
       "summary": "Canada's regulatory system evaluates crops based on novelty of traits rather than breeding method. In May 2022, Health Canada published updated guidance clarifying that gene-edited crops meeting criteria for non-novel food are treated as conventional and do not require pre-market safety assessment. In May 2024, CFIA confirmed that gene-edited plants used in livestock feed are safe. A voluntary transparency initiative allows developers to notify Health Canada of non-novel gene-edited products.",
       "approach": "Product-based, trait-focused. Gene-edited crops without novel traits are treated as conventional and exempt from pre-market safety evaluation.",
@@ -122,7 +122,7 @@
       "regulatory_body": "Ministry of Agriculture and Rural Affairs (MARA)",
       "summary": "MARA issued China's first gene-editing guidelines in January 2022, establishing application procedures for gene-edited plants without exogenous genes. These plants undergo a simplified safety evaluation compared to traditional GMOs, bypassing the lengthy multi-phase field trial process. In April 2023, MARA issued supplementary rules clarifying classification criteria. MARA has begun issuing biosafety certificates for gene-edited crop events. Plants that introduce exogenous genes remain subject to full GMO safety evaluation.",
       "approach": "Product-based, streamlined evaluation. Gene-edited plants without exogenous genes undergo simplified safety assessment compared to full GMO review.",
-      "further_reading_url": "https://crispr-gene-editing-regs-tracker.geneticliteracyproject.org/china-crops-food/"
+      "further_reading_url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=MARA%20Issues%20First%20Ever%20Gene-Editing%20Guidelines_Beijing_China%20-%20People%27s%20Republic%20of_01-26-2022.pdf"
     },
     "170": {
       "name": "Colombia",
@@ -205,12 +205,12 @@
       "name": "El Salvador",
       "status": "changing",
       "legislation": "Inter-ministerial Technical Resolution RT 65:06.01:18 (2019), signed with Honduras and Guatemala",
-      "legislation_url": "",
+      "legislation_url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Agricultural%20Biotechnology%20Annual_San%20Salvador_El%20Salvador_ES2024-0006.pdf",
       "year_established": 2019,
       "regulatory_body": "",
       "summary": "El Salvador is a signatory to the 2019 inter-ministerial Technical Resolution (RT 65:06.01:18) with Honduras and Guatemala, agreeing that gene-edited crops without transgenic DNA should be regulated as conventional crops on a case-by-case basis. The agreement requires each country to create a national advisory committee for risk assessment of living modified organisms for agricultural use. Full domestic implementation of the streamlined procedures has been anticipated but not confirmed.",
       "approach": "Product-based (under regional agreement). Gene-edited products without transgenic DNA to be treated as conventional.",
-      "further_reading_url": ""
+      "further_reading_url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Agricultural%20Biotechnology%20Annual_San%20Salvador_El%20Salvador_ES2024-0006.pdf"
     },
     "233": {
       "name": "Estonia",
@@ -264,8 +264,8 @@
       "year_established": 2017,
       "regulatory_body": "",
       "summary": "Georgia adopted a ban in 2017 on gene-edited plants for cultivation, import, and export.",
-      "approach": "Prohibitive. Gene-edited plants banned from cultivation, import, and export.",
-      "further_reading_url": ""
+      "approach": "Prohibitive. Gene-edited plants banned from cultivation, import, and export. GE medical research is taking place in the country.",
+      "further_reading_url": "https://www.gpb.org/news/2026/01/13/georgia-high-schoolers-are-using-gene-editing-technology-diagnose-lyme-disease"
     },
     "276": {
       "name": "Germany",
@@ -304,7 +304,7 @@
       "name": "Guatemala",
       "status": "distinct",
       "legislation": "Ministerio de Agricultura, Ganadería y Alimentación (MAGA). Resolution No. UA 60-2019. Inter-ministerial Technical Resolution RT 65:06.01:18",
-      "legislation_url": "",
+      "legislation_url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Biotechnology%20and%20Other%20New%20Production%20Technologies%20Annual_Guatemala%20City_Guatemala GT2025-0012.pdf",
       "year_established": 2019,
       "regulatory_body": "Ministerio de Agricultura, Ganadería y Alimentación (MAGA)",
       "summary": "Guatemala adopted Resolution No. UA 60-2019, establishing a regulatory pathway for gene-edited crops. As part of the 2019 inter-ministerial Technical Resolution (RT 65:06.01:18) signed with Honduras and El Salvador, Guatemala exempts gene-edited organisms without stable integration of exogenous DNA from GMO regulation. Products are evaluated on a case-by-case basis, with determination of gene-edited plant classification falling under MAGA jurisdiction.",
@@ -320,7 +320,7 @@
       "regulatory_body": "National Service of Agrifood Health and Safety (SENASA), National Biotechnology and Agricultural Biosafety Committee (CNBBA)",
       "summary": "Honduras became the first country in Central America to regulate products of new breeding techniques (NBTs) when SENASA published a resolution establishing a streamlined authorisation procedure in 2019. As part of the inter-ministerial Technical Resolution (RT 65:06.01:18) signed with Guatemala and El Salvador, gene-edited crops that do not fulfil the definition of transgenic GMOs are regulated as conventional crops. The simplified procedure shortens approval timelines for gene-edited products.",
       "approach": "Product-based, case-by-case. Gene-edited products without transgenic DNA regulated as conventional crops under streamlined procedure.",
-      "further_reading_url": ""
+      "further_reading_url": "https://publications.iadb.org/en/genome-editing-latin-america-regional-regulatory-overview?__cf_chl_f_tk=i4AuuzQcNFR1lmyl6dnx2grtmSkvgZ0tzMHewQU0NCg-1782901889-1.0.1.1-4vt5bwRa6_mJeI.E57.bzSy1vqMKxAUawAR3CzSJ7PM"
     },
     "348": {
       "name": "Hungary",
@@ -337,23 +337,23 @@
       "name": "India",
       "status": "distinct",
       "legislation": "Department of Biotechnology (DBT). Guidelines for Safety Assessment of Genome Edited Plants, 2022",
-      "legislation_url": "",
+      "legislation_url": "https://naas.org.in/Policy%20Briefs/PB7-Regulaory%20Framework.pdf",
       "year_established": 2022,
       "regulatory_body": "Department of Biotechnology (DBT)",
       "summary": "In May 2022, the Department of Biotechnology issued final guidelines exempting genome-edited plants without foreign DNA from the Rules 1989 framework implemented by the Genetic Engineering Appraisal Committee (GEAC). Researchers using gene-editing technology to modify plant genomes without introducing foreign genes no longer require GEAC approval. The Institutional Biosafety Committee monitors genome-edited plants under containment until confirmed free from foreign DNA. The guidelines align India's framework with other major food-producing countries.",
       "approach": "Product-based, case-by-case. Genome-edited plants free of foreign DNA are exempt from GEAC approval under Rules 1989.",
-      "further_reading_url": "https://crispr-gene-editing-regs-tracker.geneticliteracyproject.org/india-crops-food/"
+      "further_reading_url": ""
     },
     "360": {
       "name": "Indonesia",
       "status": "changing",
       "legislation": "BPOM Regulation No. 19/2024 on Supervision of Genetically Engineered Food. Government Regulation No. 21 of 2005 regarding Biosafety of Genetically Modified Products",
-      "legislation_url": "",
-      "year_established": null,
+      "legislation_url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Indonesia%20Updates%20Regulations%20on%20Genetically%20Engineered%20Processed%20Products_Jakarta_Indonesia_ID2025-0005.pdf",
+      "year_established": 2024,
       "regulatory_body": "National Agency for Drug and Food Control (BPOM), GM Products Biosafety Commission",
       "summary": "Indonesia issued Regulation No. 19/2024 on the Supervision of Genetically Engineered Food on 18 November 2024, introducing food safety standards for genome editing. Food produced via genome editing is classified as either GM or non-GM based on assessment by the GM Products Biosafety Commission, in accordance with Government Regulation No. 21 of 2005. Mandatory labeling applies to packaged food containing at least 5% genetically engineered DNA, with a 12-month compliance grace period.",
       "approach": "Product-based, case-by-case. Classification as GM or non-GM determined by the GM Products Biosafety Commission based on mechanism of genetic repair.",
-      "further_reading_url": ""
+      "further_reading_url": "https://ap.fftc.org.tw/article/3862"
     },
     "372": {
       "name": "Ireland",
@@ -373,9 +373,9 @@
       "legislation_url": "",
       "year_established": 2019,
       "regulatory_body": "National Committee for Transgenic Plants (NCTP)",
-      "summary": "Israel's NCTP announced in 2017 and clarified in 2019 that transgene-free plants are exempt from GEd regulation on a case-by-case basis",
-      "approach": "",
-      "further_reading_url": ""
+      "summary": "Israel's NCTP announced in 2017 and clarified in 2019 that transgene-free plants are exempt from GEd regulation on a case-by-case basis. Applications to work with GE products must be approved by the NCTP, which also seeks input from the National Committee for Experiments (NCE). Under the regulation, certain product categories would be exempt from labelling requirements, including: 1. Products not containing foreign DNA or protein, 2. Products with less than 0.9% of the product being comprised of GE ingredients",
+      "approach": "Product-based, case-by-case. Gene-edited products without foreign genetic material excluded from GMO regulation.",
+      "further_reading_url": "https://apps.fas.usda.gov/newgainapi/api/Report/DownloadReportByFileName?fileName=Biotechnology%20and%20Other%20New%20Production%20Technologies%20Annual_Tel%20Aviv_Israel_IS2025-0022.pdf"
     },
     "380": {
       "name": "Italy",
@@ -397,7 +397,7 @@
       "regulatory_body": "Ministry of the Environment (MOE), Ministry of Agriculture, Forestry and Fisheries (MAFF), Ministry of Health, Labour and Welfare (MHLW)",
       "summary": "Japan established its genome-editing regulatory framework in 2019 through coordinated notifications across multiple ministries. The Ministry of the Environment ruled that SDN-1 organisms (without foreign DNA) are non-LMO under the Cartagena Act, while SDN-2 and SDN-3 remain regulated. MAFF issued procedures for biodiversity notification, and MHLW established food safety notification procedures. Gene-edited foods can be sold without safety evaluations provided they meet SDN-1 criteria, though developers must notify the government. Japan was among the first countries to commercialise gene-edited foods, with a GABA-enriched tomato reaching market in 2021.",
       "approach": "Notification-based. SDN-1 products (no foreign DNA) exempt from GMO regulation but require pre-market notification to relevant ministries.",
-      "further_reading_url": "https://crispr-gene-editing-regs-tracker.geneticliteracyproject.org/japan-crops-food/"
+      "further_reading_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9789915/"
     },
     "404": {
       "name": "Kenya",
@@ -405,8 +405,8 @@
       "legislation": "Guidelines for Determining the Regulatory Process of Genome Editing Techniques in Kenya (Revision No. 01, reference NBA/TEC/ML/11)",
       "legislation_url": "https://www.biosafetykenya.go.ke/wp-content/uploads/2025/08/Revised-Genome-Editing-Guidelines.pdf",
       "year_established": 2022,
-      "regulatory_body": "National Biosafety Authority (NBA)",
-      "summary": "The NBA regulates all activities involving GMO under the 2009 Act. The genome-editing guideline creates a case by case mechanism to decide whether a given edited organism counts as a GMO (and so falls under the Act) or not. An applicant submits an Early Consultation Form (Annex 1) with a fee, and the NBA returns a decision within 30 working days. The decisive test is whether foreign genetic material remains in the final product. If it does, the product enters the full GMO risk-assessment and approval pathway. If the product is transgene free, it falls outside the Act and is handled as conventional.",
+      "regulatory_body": "National Biosafety Authority (NBA) and Kenya Plant Health Inspectorate Service (KEPHIS)",
+      "summary": "The NBA regulates all activities involving GMO under the 2009 Act. The genome-editing guideline creates a case by case mechanism to decide whether a given edited organism counts as a GMO (and so falls under the Act) or not. An applicant submits an Early Consultation Form (Annex 1) with a fee, and the NBA returns a decision within 30 working days. The decisive test is whether foreign genetic material remains in the final product. If it does, the product enters the full GMO risk-assessment and approval pathway. If the product is transgene free, it falls outside the Act and is handled as conventional by KEPHIS.",
       "approach": "Product-based and case-by-case",
       "further_reading_url": "https://www.biosafetykenya.go.ke/guidelines-and-checklist/"
     },
@@ -471,21 +471,21 @@
       "legislation": "Genome Editing Guidelines, August 2022",
       "legislation_url": "https://africenter.isaaa.org/wp-content/uploads/2023/04/2022-MALAWI-GENOME-EDITING-GUIDELINES.pdf",
       "year_established": 2022,
-      "regulatory_body": "",
+      "regulatory_body": "Ministry of Natural Resources and Climate Change (MNRCC) and National Biosafety Regulatory Committee (NBRC)",
       "summary": "Malawi approved its Genome Editing Guidelines in August 2022, becoming the third African country (after Nigeria and Kenya) to adopt such guidelines. The guidelines provide a step-by-step procedure for regulating genome editing and products, clarifying which products are exempt from GMO regulation. Products containing novel combinations of DNA are regulated as GMOs, while those without foreign DNA are treated as conventional. The guidelines were developed in consultation with biosafety stakeholders.",
       "approach": "Product-based, case-by-case. Products without novel DNA combinations exempt from GMO regulation.",
-      "further_reading_url": "https://africenter.isaaa.org/malawis-genome-editing-guidelines-key-promoting-supportive-environment-new-breeding-technologies/"
+      "further_reading_url": "https://www.isaaa.org/blog/entry/default.asp?BlogDate=1/24/2024"
     },
     "458": {
       "name": "Malaysia",
       "status": "changing",
       "legislation": "Biosafety Act 2007. Biosafety (Approval and Notifications) Regulations 2010",
-      "legislation_url": "",
+      "legislation_url": "https://imu.edu.my/irdi/wp-content/uploads/2017/08/Biosafety-Act-2007.pdf",
       "year_established": null,
       "regulatory_body": "National Biosafety Board (NBB), Department of Biosafety (DOB), Ministry of Energy and Natural Resources",
       "summary": "Malaysia's current regulatory framework under the Biosafety Act 2007 does not distinguish between GMOs and gene-edited crops, creating regulatory uncertainty for gene-editing research. Scientists have called for Malaysia to follow countries like Japan by exempting gene-edited crops without foreign DNA from GMO regulation. Active gene-editing research is underway, including work on gene-edited rice, but commercialisation prospects remain uncertain. During COP-MOP 11 in 2024, Malaysia supported balanced approaches on the classification of gene-edited organisms.",
       "approach": "Currently regulated under GMO framework. No specific gene-editing guidelines or exemptions.",
-      "further_reading_url": ""
+      "further_reading_url": "https://theedgemalaysia.com/node/775350"
     },
     "470": {
       "name": "Malta",
@@ -514,11 +514,11 @@
       "status": "changing",
       "legislation": "Biosafety Act of Genetically Modified Organisms (2005)",
       "legislation_url": "",
-      "year_established": null,
+      "year_established": 2005,
       "regulatory_body": "SEMARNAT (Secretariat of Environment and Natural Resources), SENASICA (National Service of Agri-food Health, Safety, and Quality)",
       "summary": "Mexico has been deliberating on how to regulate gene editing separately from traditional GMOs since at least 2016, but no specific gene-editing framework has been enacted. Scientists across Mexico have called on the government to establish evidence-based regulations distinguishing CRISPR and similar technologies from GMOs. A 2021 presidential decree called for the phase-out of glyphosate and restrictions on GE corn importation, adding further complexity. SEMARNAT handles environmental risk assessment while SENASICA oversees agricultural health and safety.",
       "approach": "Currently no specific gene-editing framework. Gene-edited crops assessed under existing GMO biosafety legislation.",
-      "further_reading_url": "https://crispr-gene-editing-regs-tracker.geneticliteracyproject.org/mexico-crops-food/"
+      "further_reading_url": "https://revistas.juridicas.unam.mx/index.php/mexican-law-review/article/download/7717/9684/9702  "
     },
     "498": {
       "name": "Moldova",
@@ -534,10 +534,10 @@
     "508": {
       "name": "Mozambique",
       "status": "changing",
-      "legislation": "",
+      "legislation": "Biosafety regulations for GMOs (decree 71/2014)",
       "legislation_url": "",
       "year_established": null,
-      "regulatory_body": "",
+      "regulatory_body": "Ministry of Science and Technology",
       "summary": "Mozambique is examining the status of genome editing within its existing legislation as of 2024. At least three genome editing research projects are underway, and genetically modified crop field trials (including cassava) are taking place. Specific regulatory guidelines for gene-edited crops have not yet been published.",
       "approach": "",
       "further_reading_url": ""
@@ -579,7 +579,7 @@
       "name": "Nigeria",
       "status": "distinct",
       "legislation": "National Biosafety Management Agency (NBMA). National Biosafety Guidelines on Gene Editing, 2020",
-      "legislation_url": "https://www.fas.usda.gov/data/nigeria-government-nigeria-approved-national-biosafety-guideline-gene-editing",
+      "legislation_url": "hhttps://nbma.gov.ng/wp-content/uploads/2022/03/NATIONAL-GENE-EDITING-GUIDELINE.pdf, https://archive.africenter.isaaa.org/wp-content/uploads/2022/03/From-Our-NewsRoom_2-Nigeria-Releases-National-Guidelines-on-Gene-Editing-Main-website-article.pdf",
       "year_established": 2020,
       "regulatory_body": "National Biosafety Management Agency (NBMA)",
       "summary": "Nigeria became the first African country to issue gene-editing guidelines when the NBMA authorised them in December 2020, with formal distribution in February 2022. The guidelines state that gene-edited products without foreign DNA may not need to undergo the full biosafety assessment process. Nigeria has been active in advancing agricultural biotechnology, approving commercial release of four TELA maize varieties in January 2024 — the country's first GM cereal crop.",
@@ -595,7 +595,7 @@
       "regulatory_body": "Norwegian Scientific Committee for Food and Environment, Norwegian Environment Agency",
       "summary": "Norway updated its Gene Technology Act last year to maintain case-by-case testing of all GM and GEd products, while also aligning with the EU's future direction. However, if the EU redefines GMOs to exclude products of new genomic techniques (NGTs) from GM requirements, Norway must align due to its membership in the European Economic Area (EEA).",
       "approach": "Precautionary, case-by-case.",
-      "further_reading_url": ""
+      "further_reading_url": "https://www.nibio.no/en/news/2026/eu-clears-the-way-for-crispr-crops-norway-expected-to-follow "
     },
     "600": {
       "name": "Paraguay",
@@ -628,7 +628,7 @@
       "regulatory_body": "Department of Science and Technology (DOST), Department of Agriculture (DA), Bureau of Plant Industry (BPI)",
       "summary": "The Philippines regulates gene-edited crops through Joint Department Circular No. 1, signed by five departments (DOST, DA, DENR, DOH, DILG), which provides a technical evaluation process to classify whether products of plant breeding innovations (PBIs) are GMOs. Products without novel combinations of genetic material are issued a certificate of non-coverage. In April 2023, the BPI determined a gene-edited reduced-browning banana to be non-GE, the first product through this process. Additional gene-edited banana varieties were approved in June 2024.",
       "approach": "Product-based, case-by-case. Technical evaluation determines whether products are classified as GMOs based on presence of novel genetic material.",
-      "further_reading_url": ""
+      "further_reading_url": "https://ncbp.dost.gov.ph/policies/executive-orders/"
     },
     "616": {
       "name": "Poland",
@@ -666,13 +666,13 @@
     "646": {
       "name": "Rwanda",
       "status": "changing",
-      "legislation": "",
-      "legislation_url": "",
+      "legislation": "Law n° 025/2024 on biosafety",
+      "legislation_url": "https://www.rema.gov.rw/index.php?eID=dumpFile&t=f&f=137919&token=d6a444449c13d117362717f69e6eb9eccf5ed602",
       "year_established": null,
-      "regulatory_body": "",
+      "regulatory_body": "Rwanda Environment Management Authority (REMA)",
       "summary": "Rwanda adopted gene-editing legislation in 2024, joining the growing number of African countries with biosafety frameworks. At least four genome editing research projects are underway. Rwanda is a party to the Cartagena Protocol on Biosafety and has developed a functional biosafety system.",
       "approach": "",
-      "further_reading_url": ""
+      "further_reading_url": "https://www.rema.gov.rw/updates/news-details/week-long-expert-workshop-strengthens-rwandas-biosafety-regulatory-system-and-advances-regulations"
     },
     "702": {
       "name": "Singapore",
@@ -727,7 +727,7 @@
       "regulatory_body": "Ministry of Food and Drug Safety (MFDS), Ministry of Agriculture, Food and Rural Affairs (MAFRA)",
       "summary": "South Korea currently regulates gene-edited crops under the same framework as GMOs, requiring 'GMO' labelling even for gene-edited crops without foreign genes. The National Assembly passed the 'GMO Full Disclosure Act' (Food Sanitation Act Amendment). Scientists and industry have called for regulatory reform to distinguish gene editing from traditional GMOs, noting that Korea has technological competitiveness but lags in commercialisation speed. As of 2025, regulatory reform discussions are ongoing but no specific gene-editing exemption framework has been enacted.",
       "approach": "Currently regulated as GMO. Reform discussions ongoing.",
-      "further_reading_url": ""
+      "further_reading_url": "https://www.chosun.com/english/opinion-en/2025/12/09/YUFZ64NT2BG3ZDYK3VQKL3JNAY/"
     },
     "724": {
       "name": "Spain",
@@ -760,7 +760,7 @@
       "regulatory_body": "Federal Council, Federal Office for the Environment (FOEN)",
       "summary": "Switzerland maintains a cultivation moratorium on GMOs, extended through the end of 2030 in June 2025. The Federal Council opened consultation on a draft Breeding Technologies Act on 2 April 2025, proposing a risk-based authorisation procedure for plants from new breeding technologies. The proposal would exempt targeted mutagenesis (including CRISPR) from the strict GMO ban provided no transgenic DNA from unrelated species is present. Uniquely, the Swiss proposal requires modifications to respect the constitutional principle of 'Dignity of Living Beings'. The proposal faces significant opposition from environmental and consumer groups.",
       "approach": "Currently under moratorium. Proposed risk-based authorisation for plants from new breeding technologies.",
-      "further_reading_url": "https://crispr-gene-editing-regs-tracker.geneticliteracyproject.org/switzerland-crops-food/"
+      "further_reading_url": "https://www.isaaa.org/kc/cropbiotechupdate/article/default.asp?ID=21283"
     },
     "764": {
       "name": "Thailand",
@@ -776,13 +776,13 @@
     "800": {
       "name": "Uganda",
       "status": "changing",
-      "legislation": "UNCST Standard Operating Procedures and guidelines. Genetic Engineering Regulatory Act (GERA) declined by President 2022",
-      "legislation_url": "",
+      "legislation": "UNCST Standard Operating Procedures and guidelines. Biosafety Act 2017 & Genetic Engineering Regulatory Act (GERA) declined by President 2019",
+      "legislation_url": "https://bills.parliament.ug/attachments/THE%20NATIONAL%20BIOSAFETY%20ACT%202017%2011-01-2018%20Laid%20Document.pdf",
       "year_established": null,
       "regulatory_body": "Uganda National Council for Science and Technology (UNCST), National Biosafety Committee (NBC)",
-      "summary": "Uganda's biosafety regulation is managed by UNCST through Standard Operating Procedures and guidelines, as dedicated biosafety legislation remains absent. The President declined to assent to the Genetic Engineering Regulatory Act (GERA) in 2022, creating uncertainty around GM and gene-editing regulation. UNCST through the NBC has been drafting guidelines for gene-edited crops, expected to exempt products without transgenes from the full GMO assessment. Active gene-editing research includes advanced banana trials.",
+      "summary": "Uganda's biosafety regulation is managed by UNCST through Standard Operating Procedures and guidelines, as dedicated biosafety legislation remains absent. The President declined to assent to the Genetic Engineering Regulatory Act (GERA) in 2019 (drafting restarted 2022), creating uncertainty around GM and gene-editing regulation. UNCST through the NBC has been drafting guidelines for gene-edited crops, expected to exempt products without transgenes from the full GMO assessment. Active gene-editing research includes advanced banana trials.",
       "approach": "Guided by UNCST Standard Operating Procedures. Specific gene-editing guidelines under development.",
-      "further_reading_url": ""
+      "further_reading_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12580632/"
     },
     "858": {
       "name": "Uruguay",
@@ -810,7 +810,7 @@
       "name": "Vietnam",
       "status": "distinct",
       "legislation": "Government of Vietnam. Decree 43/2026/ND-CP (January 2026), implementing Law 146/2025/QH15 (Amended Law on Biodiversity)",
-      "legislation_url": "",
+      "legislation_url": "https://www.fas.usda.gov/data/gain-report/2026/04/Vietnam%20Updates%20Regulatory%20Framework%20for%20Agricultural%20Biotechnology_Hanoi_Vietnam_VM2026-0013.pdf",
       "year_established": 2026,
       "regulatory_body": "Ministry of Agriculture and Environment (MAE)",
       "summary": "Vietnam formalised its distinction between GMOs and gene-edited crops through Decree 43/2026/ND-CP, issued 26 January 2026, implementing the amended Law on Biodiversity (Law 146/2025/QH15). Gene-edited organisms without foreign DNA are excluded from GMO regulatory requirements and eligible for a self-declaration process. The decree accelerates approval timelines for GE food and feed products from 90 to 45 working days for products already cleared in at least five OECD or G20 nations. The reform was driven by Party Resolution 57 (December 2024), which identified biotechnology as a strategic technology.",
@@ -821,12 +821,12 @@
       "name": "Zambia",
       "status": "distinct",
       "legislation": "Biotechnology and Biosafety Policy (2003, under review)",
-      "legislation_url": "",
+      "legislation_url": "https://www.aatf-africa.org/wp-content/uploads/2021/02/Biosafety-Act-2007.pdf",
       "year_established": null,
       "regulatory_body": "National Biosafety Authority",
       "summary": "Zambia's Biotechnology and Biosafety Policy was enacted in 2003 and is under review. The National Biosafety Authority has been working toward developing genome-editing guidelines and reviewing the Biosafety Act. As of 2024, biotech experts have identified genome editing as a viable tool for developing climate-smart crops, but the regulatory framework remains in development.",
       "approach": "Regulatory framework under development. National Biosafety Authority working on genome-editing guidelines.",
-      "further_reading_url": ""
+      "further_reading_url": "https://www.isaaa.org/kc/cropbiotechupdate/article/default.asp?ID=20830"
     }
   },
   "subdivisions": {
