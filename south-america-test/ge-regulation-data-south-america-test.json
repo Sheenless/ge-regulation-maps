@@ -83,8 +83,8 @@
     "854": {
       "name": "Burkina Faso",
       "status": "distinct",
-      "legislation": "National Biosafety Agency (ANB). Genome editing guidance documents",
-      "legislation_url": "",
+      "legislation": "Guide technique pour la réglementation de la biotechnologie moderne : Édition génomique",
+      "legislation_url": "https://s3.amazonaws.com/km.documents.attachments/56e4/f7c1/1f9293a603f0fedf51eee4bd",
       "year_established": 2023,
       "regulatory_body": "National Biosafety Agency (Agence Nationale de Biosécurité, ANB)",
       "summary": "Burkina Faso established the National Biosafety Agency in 2005 and published genome editing guidance documents excluding gene-edited products devoid of foreign genetic material from GMO regulation. In July 2024, the ANB authorised the use of genome-edited rice lines to combat bacterial blight (Decision No. 2023-000122/MESRI/SG/ANB/DG), representing one of the earliest practical applications of genome editing in West Africa.",
@@ -281,8 +281,8 @@
     "288": {
       "name": "Ghana",
       "status": "distinct",
-      "legislation": "National Biosafety Authority (NBA). Guidelines on Genome Editing (October 2023). Biosafety Act, 2011 (Act 831)",
-      "legislation_url": "",
+      "legislation": "Guidelines for Genome Editing Applications in Ghana",
+      "legislation_url": "https://s3.amazonaws.com/km.documents.attachments/0a4c/a246/f2f8ecc68c802d257defdc32",
       "year_established": 2023,
       "regulatory_body": "National Biosafety Authority (NBA)",
       "summary": "Ghana's NBA published Guidelines on Genome Editing on 30 October 2023, providing procedural guidance on which genome-edited organisms fall under the Biosafety Act 2011 (Act 831). Ghana joined Nigeria, Kenya, and Malawi as the fourth African country with validated genome-editing guidelines. The guidelines provide clear processes for risk assessment, management, and decision-making through scientifically sound, case-by-case evaluations, distinguishing genome-edited products without foreign DNA from regulated GMOs.",
@@ -579,12 +579,12 @@
       "name": "Nigeria",
       "status": "distinct",
       "legislation": "National Biosafety Management Agency (NBMA). National Biosafety Guidelines on Gene Editing, 2020",
-      "legislation_url": "hhttps://nbma.gov.ng/wp-content/uploads/2022/03/NATIONAL-GENE-EDITING-GUIDELINE.pdf, https://archive.africenter.isaaa.org/wp-content/uploads/2022/03/From-Our-NewsRoom_2-Nigeria-Releases-National-Guidelines-on-Gene-Editing-Main-website-article.pdf",
+      "legislation_url": "https://nbma.gov.ng/wp-content/uploads/2022/03/NATIONAL-GENE-EDITING-GUIDELINE.pdf",
       "year_established": 2020,
       "regulatory_body": "National Biosafety Management Agency (NBMA)",
-      "summary": "Nigeria became the first African country to issue gene-editing guidelines when the NBMA authorised them in December 2020, with formal distribution in February 2022. The guidelines state that gene-edited products without foreign DNA may not need to undergo the full biosafety assessment process. Nigeria has been active in advancing agricultural biotechnology, approving commercial release of four TELA maize varieties in January 2024 — the country's first GM cereal crop.",
-      "approach": "Product-based, case-by-case. Gene-edited products without foreign DNA may be exempt from full biosafety assessment.",
-      "further_reading_url": ""
+      "summary": "Nigeria became the first African country to issue gene-editing guidelines when the NBMA authorised them in December 2020, with formal distribution in February 2022. The guidelines state that if a gene-edited product contains foreign DNA, it is classified as a GMO and is regulated under the NBMA 2015 Act & 2019 Amendment Act. In contrast, gene-edited products without foreign DNA will be subject to case-by-case regulatory provisions and may not need to undergo the full biosafety assessment process.",
+      "approach": "Product-based, case-by-case.",
+      "further_reading_url": "https://nbma.gov.ng/resources/"
     },
     "578": {
       "name": "Norway",
@@ -596,6 +596,17 @@
       "summary": "Norway updated its Gene Technology Act last year to maintain case-by-case testing of all GM and GEd products, while also aligning with the EU's future direction. However, if the EU redefines GMOs to exclude products of new genomic techniques (NGTs) from GM requirements, Norway must align due to its membership in the European Economic Area (EEA).",
       "approach": "Precautionary, case-by-case.",
       "further_reading_url": "https://www.nibio.no/en/news/2026/eu-clears-the-way-for-crispr-crops-norway-expected-to-follow "
+    },
+    "591": {
+      "name": "Panama",
+      "status": "distinct",
+      "legislation": "National Biosafety Commission (CNB). Resolución CNB 008-2026",
+      "legislation_url": "https://s3-legispan.asamblea.gob.pa/legispan/GACETAS/2020/2026/30559-D_2026.pdf",
+      "year_established": 2026,
+      "regulatory_body": "National Biosafety Commission (CNB)",
+      "summary": "Panama established a regulatory framework for gene-edited crops through Resolución CNB 008-2026, published in Gaceta Oficial No. 30559-D on 2 July 2026. The resolution creates a scientific assessment procedure allowing developers to request an official determination on whether their product qualifies as a GMO under Panamanian law. The classification criterion is whether the final organism contains a 'new combination of genetic material' as defined under the Cartagena Protocol on Biosafety; products without novel genetic combinations may fall outside existing GMO legislation.",
+      "approach": "Product-based, case-by-case. Classification determined by presence or absence of a 'new combination of genetic material' per the Cartagena Protocol on Biosafety.",
+      "further_reading_url": "https://cropgeregulations.com/panama-introduces-new-framework-for-gene-edited-crops/"
     },
     "600": {
       "name": "Paraguay",
@@ -776,7 +787,7 @@
     "800": {
       "name": "Uganda",
       "status": "changing",
-      "legislation": "UNCST Standard Operating Procedures and guidelines. Biosafety Act 2017 & Genetic Engineering Regulatory Act (GERA) declined by President 2019",
+      "legislation": "UNCST Standard Operating Procedures and guidelines. Biosafety Act 2017 & Genetic Engineering Regulatory Act (GERA) declined by the President 2019",
       "legislation_url": "https://bills.parliament.ug/attachments/THE%20NATIONAL%20BIOSAFETY%20ACT%202017%2011-01-2018%20Laid%20Document.pdf",
       "year_established": null,
       "regulatory_body": "Uganda National Council for Science and Technology (UNCST), National Biosafety Committee (NBC)",
@@ -821,12 +832,12 @@
       "name": "Zambia",
       "status": "distinct",
       "legislation": "Biotechnology and Biosafety Policy (2003, under review)",
-      "legislation_url": "https://www.aatf-africa.org/wp-content/uploads/2021/02/Biosafety-Act-2007.pdf",
+      "legislation_url": "https://s3.amazonaws.com/km.documents.attachments/e594/4297/636a47773cf2a85eadb0c595",
       "year_established": null,
       "regulatory_body": "National Biosafety Authority",
-      "summary": "Zambia's Biotechnology and Biosafety Policy was enacted in 2003 and is under review. The National Biosafety Authority has been working toward developing genome-editing guidelines and reviewing the Biosafety Act. As of 2024, biotech experts have identified genome editing as a viable tool for developing climate-smart crops, but the regulatory framework remains in development.",
-      "approach": "Regulatory framework under development. National Biosafety Authority working on genome-editing guidelines.",
-      "further_reading_url": "https://www.isaaa.org/kc/cropbiotechupdate/article/default.asp?ID=20830"
+      "summary": "Zambia’s National Biotechnology and Biosafety Policy was enacted in 2003, followed by the Biosafety Act in 2007. In 2025, the National Biosafety Authority issued guidelines establishing the regulatory pathway for genome-edited plants. If foreign DNA remains in the final product, it is regulated as a GMO under the Biosafety Act. Products are not regulated under the Act when the edits: (a) involve inserts from sexually compatible species, (b) yield processed products in which foreign DNA is no longer detectable, (c) produce outcomes comparable to natural or conventionally bred variation, or (d) reach a stage at which the foreign DNA has been removed or segregated.",
+      "approach": "Product-based and case-by-case",
+      "further_reading_url": "https://nbazambia.org.zm/"
     }
   },
   "subdivisions": {
