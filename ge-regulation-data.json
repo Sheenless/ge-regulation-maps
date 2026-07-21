@@ -47,6 +47,17 @@
       "approach": "Product-based, case-by-case. National authorities must verify that NGT plants belong to category 1 (NGT-1), but their offspring do not need to be subsequently verified.",
       "further_reading_url": "https://cropgeregulations.com/eu-publishes-plan-to-deploy-ngt-framework-by-july-2028/"
     },
+    "050": {
+      "name": "Bangladesh",
+      "status": "distinct",
+      "legislation": "Ministry of Agriculture, Bangladesh Agricultural Research Council (BARC). Standard Operating Procedures for Research and Release of Genome Edited Plants of Categories SDN-1 and SDN-2, 2023",
+      "legislation_url": "https://bangladeshbiosafety.org/wp-content/uploads/2024/02/Bangladesh_SOP_Genome_Edited_Plants.pdf",
+      "year_established": 2023,
+      "regulatory_body": "Bangladesh Agricultural Research Council (BARC) and National Seed Board (NSB)",
+      "summary": "In December 2023, Bangladesh's Ministry of Agriculture approved Standard Operating Procedures exempting SDN-1 and SDN-2 genome-edited plants from the more stringent biosafety pathway applied to genetically engineered crops under the National Committee on Biosafety (NCB). Developers must demonstrate the absence of any exogenously introduced DNA; once confirmed, the plant can proceed to variety registration and release via the National Seed Board (NSB) following the same procedure used for conventionally bred varieties. The SOP followed a multi-year drafting process supported by the South Asia Biosafety Program. The Bangladesh Rice Research Institute (BRRI) is developing the country's first CRISPR/Cas9 gene-edited rice lines, targeting resistance to rice blast disease and brown planthopper, and improved salinity tolerance.",
+      "approach": "Product-based, case-by-case. SDN-1 and SDN-2 gene-edited plants without exogenously introduced DNA are exempt from GMO biosafety regulation and follow conventional variety-release procedures via the National Seed Board.",
+      "further_reading_url": "https://geneticliteracyproject.org/2024/03/12/bangladesh-greenlights-gene-editing-to-meet-the-needs-of-farmers-and-consumers/"
+    },
     "056": {
       "name": "Belgium",
       "status": "changing",
