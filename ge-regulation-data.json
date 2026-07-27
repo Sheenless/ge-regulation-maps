@@ -844,11 +844,22 @@
       "status": "distinct",
       "legislation": "Biotechnology and Biosafety Policy (2003, under review)",
       "legislation_url": "https://s3.amazonaws.com/km.documents.attachments/e594/4297/636a47773cf2a85eadb0c595",
-      "year_established": null,
+      "year_established": 2026,
       "regulatory_body": "National Biosafety Authority",
       "summary": "Zambia’s National Biotechnology and Biosafety Policy was enacted in 2003, followed by the Biosafety Act in 2007. In 2025, the National Biosafety Authority issued guidelines establishing the regulatory pathway for genome-edited plants. If foreign DNA remains in the final product, it is regulated as a GMO under the Biosafety Act. Products are not regulated under the Act when the edits: (a) involve inserts from sexually compatible species, (b) yield processed products in which foreign DNA is no longer detectable, (c) produce outcomes comparable to natural or conventionally bred variation, or (d) reach a stage at which the foreign DNA has been removed or segregated.",
       "approach": "Product-based and case-by-case",
       "further_reading_url": "https://nbazambia.org.zm/"
+    }
+    "716": {
+      "name": "Zimbabwe",
+      "status": "distinct",
+      "legislation": "Guidelines on Genome Editing Regulatory Processes",
+      "legislation_url": "https://www.nba.ac.zw/assets/documents/NBA Guidelines on Genome Editing Regulatory Processes.pdf",
+      "year_established": 2026,
+      "regulatory_body": "National Biotechnology Authority (NBA) of Zimbabwe",
+      "summary": "Zimbabwe approved its Guidelines on Genome Editing Regulatory Processes in 2026, aligned with the National Biotechnology Authority Act of 2006, to provide a regulatory pathway for genome-editing activities and products. Applicants are required to submit a pre-submission form to the NBA, which determines on a case-by-case basis whether a genome-edited product falls under the GMO Regulations or conventional regulation. The guidelines classify genome editing outcomes according to the type of site-directed nuclease (SDN) event. SDN-1 and SDN-2 products that do not contain foreign DNA and are comparable to naturally occurring variants or conventionally induced mutations are classified as non-GM, whereas SDN-3 products are classified as GMOs.",
+      "approach": "Product-based and case-by-case",
+      "further_reading_url": "https://www.nba.ac.zw/regulatory_instruments.html"
     }
   },
   "subdivisions": {
