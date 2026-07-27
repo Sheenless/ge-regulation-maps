@@ -854,7 +854,7 @@
       "name": "Zimbabwe",
       "status": "distinct",
       "legislation": "Guidelines on Genome Editing Regulatory Processes",
-      "legislation_url": "https://www.nba.ac.zw/assets/documents/NBA Guidelines on Genome Editing Regulatory Processes.pdf",
+      "legislation_url": "https://www.nba.ac.zw/assets/documents/NBA%20Guidelines%20on%20Genome%20Editing%20Regulatory%20Processes.pdf",
       "year_established": 2026,
       "regulatory_body": "National Biotechnology Authority (NBA) of Zimbabwe",
       "summary": "Zimbabwe approved its Guidelines on Genome Editing Regulatory Processes in 2026, aligned with the National Biotechnology Authority Act of 2006, to provide a regulatory pathway for genome-editing activities and products. Applicants are required to submit a pre-submission form to the NBA, which determines on a case-by-case basis whether a genome-edited product falls under the GMO Regulations or conventional regulation. The guidelines classify genome editing outcomes according to the type of site-directed nuclease (SDN) event. SDN-1 and SDN-2 products that do not contain foreign DNA and are comparable to naturally occurring variants or conventionally induced mutations are classified as non-GM, whereas SDN-3 products are classified as GMOs.",
