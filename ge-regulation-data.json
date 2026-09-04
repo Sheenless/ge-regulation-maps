@@ -28,12 +28,12 @@
     "036": {
       "name": "Australia",
       "status": "distinct",
-      "legislation": "Australian government, department of health, office of the Gene Technology Regulator",
+      "legislation": "Gene Technology Amendment (2019 Measures No. 1) Regulations 2019 (Cth), made under the Gene Technology Act 2000. Australia New Zealand Food Standards Code, Proposal P1055 (Definitions for gene technology and new breeding techniques)",
       "legislation_url": "https://www.legislation.gov.au/F2001B00162/latest/text",
       "year_established": 2019,
-      "regulatory_body": "Food Standards Australia New Zealand (FANZ) and Gene Technology Regulator (GTR)",
-      "summary": "SDN-1 organisms are exempt from being regulated as GMOs under the Gene Technology Act 2000. in 2025, FANZ updated the definitions of 'novel DNA' and 'novel food' to allow outcome-based evaluation, meaning transgene-free GEd crops no longer classify as GM food.",
-      "approach": "",
+      "regulatory_body": "Office of the Gene Technology Regulator (OGTR) and Food Standards Australia New Zealand (FSANZ)",
+      "summary": "The Gene Technology Amendment (2019 Measures No. 1) Regulations 2019, commencing 8 October 2019, excluded SDN-1 organisms (site-directed nuclease edits repaired without an added nucleic acid template) from regulation as GMOs under the Gene Technology Act 2000; SDN-2 and SDN-3 edits made using a repair template remain regulated. Separately, FSANZ's Proposal P1055 replaced the process-based definition of 'food produced using gene technology' in the Food Standards Code with an outcome-based definition of 'genetically modified food' turning on whether 'novel DNA' has been introduced. The FSANZ Board approved the change on 4 June 2025, food ministers agreed not to seek a review on 25 July 2025, and the updated Code was gazetted on 2 September 2025, meaning transgene-free gene-edited foods that do not introduce novel DNA no longer classify as GM food.",
+      "approach": "Product/outcome-based. OGTR excludes template-free SDN-1 organisms from GMO regulation; FSANZ's 'novel DNA' test similarly excludes transgene-free gene-edited foods from GM food classification.",
       "further_reading_url": "https://cropgeregulations.com/new-ge-regulatory-overview-report/"
     },
     "040": {
@@ -116,12 +116,12 @@
     "152": {
       "name": "Chile",
       "status": "distinct",
-      "legislation": "Ministry of Agriculture, SAG. Draft Resolution on NBTs (open for public consultation, January 2026)",
+      "legislation": "Ministry of Agriculture, SAG. Draft resolution 'Establece requisitos técnicos y administrativos para determinar normativa aplicable al material vegetal de propagación desarrollado por nuevas técnicas de mejoramiento (NBT)' (in public consultation since January 2026)",
       "legislation_url": "https://www.sag.gob.cl/sites/default/files/Proyecto-Resolucion-NBT-Consulta-Publica.pdf",
       "year_established": 2017,
       "regulatory_body": "Servicio Agrícola y Ganadero (SAG)",
-      "summary": "Chile has operated an informal case-by-case evaluation procedure since 2017 under Resolution No. 1523/2001. A draft resolution published for public consultation on 7 January 2026 would formalise this as a mandatory administrative process with a defined 20 working-day determination timeline. The draft explicitly excludes insertions of alleles from the same species from the definition of 'new combination of genetic material'. As of May 2026, the draft has not yet entered into force, pending publication in the Diario Oficial.",
-      "approach": "Informal case-by-case procedure pending formalisation. Based on whether product contains a new combination of genetic material.",
+      "summary": "Chile has operated an informal case-by-case evaluation procedure since 2017 under Resolution No. 1523/2001. SAG opened public consultation on a draft resolution on 9 January 2026 that would formalise this as a mandatory administrative process with a defined 20 working-day determination timeline, explicitly excluding insertions of alleles from the same species from the definition of 'new combination of genetic material'. SAG published consolidated public comments and its responses to them on 30 March 2026, then opened a second public consultation round from 8 June to 10 August 2026 following continued objections from seed-sovereignty and organic-sector groups, who argue the draft would allow deregulated cultivation of gene-edited crops without labelling or a public variety registry. As of August 2026, the resolution remains in draft form and has not been published in the Diario Oficial.",
+      "approach": "Informal case-by-case procedure, in place since 2017, pending formalisation via a draft NBT resolution still under public consultation as of August 2026. Based on whether a product contains a new combination of genetic material.",
       "further_reading_url": "https://cropgeregulations.com/locations/south-america/"
     },
     "156": {
@@ -648,7 +648,7 @@
       "legislation_url": "https://www.gob.pe/institucion/minam/normas-legales/7834313-d000068-2026-minam-dm",
       "year_established": 2026,
       "regulatory_body": "Ministry of the Environment (MINAM)",
-      "summary": "Peru's situation is distinctive due to the coexistence of a new GE classification framework with an active GMO moratorium. Law 29811 (2011), extended by Law 31111 to 31 December 2035, maintains a moratorium on Living Modified Organisms. Within this, MINAM approved Ministerial Resolution No. D000068-2026-MINAM-DM on 8 March 2026, establishing criteria to determine whether NBT-derived products fall within the scope of the moratorium. Transgene-free gene-edited products that do not meet the LMO definition may be classified as conventional.",
+      "summary": "Peru's situation is distinctive due to the coexistence of a new GE classification framework with an active GMO moratorium. Law 29811 (2011), extended by Law 31111 to 31 December 2035, maintains a moratorium on Living Modified Organisms. Within this, MINAM approved Ministerial Resolution No. D000068-2026-MINAM-DM on 6 March 2026, establishing criteria to determine whether NBT-derived products fall within the scope of the moratorium. Transgene-free gene-edited products that do not meet the LMO definition may be classified as conventional.",
       "approach": "Definitional exclusion operating within an active GMO moratorium. Transgene-free products may be classified as conventional under criteria established March 2026.",
       "further_reading_url": "https://cropgeregulations.com/locations/south-america/"
     },
