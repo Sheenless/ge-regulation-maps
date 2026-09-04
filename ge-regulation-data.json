@@ -3,7 +3,7 @@
     "title": "Crop Gene Editing Regulation Status by Country",
     "source": "Heaton M, Ngure GM & Daujotaite, 2026, Crop Gene Editing Regulation Tracker",
     "url": "https://cropgeregulations.com",
-    "last_updated": "2026-07-020",
+    "last_updated": "2026-09-04",
     "key_type": "ISO 3166-1 numeric",
     "statuses": {
       "distinct": "GE recognised as distinct from GM",
@@ -607,6 +607,17 @@
       "summary": "Norway updated its Gene Technology Act last year to maintain case-by-case testing of all GM and GEd products, while also aligning with the EU's future direction. However, if the EU redefines GMOs to exclude products of new genomic techniques (NGTs) from GM requirements, Norway must align due to its membership in the European Economic Area (EEA).",
       "approach": "Precautionary, case-by-case.",
       "further_reading_url": "https://www.nibio.no/en/news/2026/eu-clears-the-way-for-crispr-crops-norway-expected-to-follow "
+    },
+    "586": {
+      "name": "Pakistan",
+      "status": "distinct",
+      "legislation": "Federal Cabinet, National Agriculture Biotechnology Policy of Pakistan 2025. National Biosafety Committee amendments to the Pakistan Biosafety Rules 2005",
+      "legislation_url": "",
+      "year_established": 2026,
+      "regulatory_body": "National Biosafety Committee; Ministry of National Food Security and Research",
+      "summary": "Pakistan's Federal Cabinet approved the National Agriculture Biotechnology Policy of Pakistan 2025 on 28 April 2026, the country's first comprehensive biotechnology policy, drafted from August 2025 and modelled in part on regulatory approaches used in Japan and Australia. The policy categorises gene-edited plants by edit type: Site-Directed Nuclease (SDN)-1 products (no foreign DNA) and SDN-2 products (containing sequences only from a sexually compatible donor) are not regulated as GMOs, while SDN-3 products containing foreign DNA from a non-sexually-compatible donor remain subject to GMO regulation. Developers must provide evidence that a gene-edited plant lacks introduced exogenous DNA to obtain non-GMO certification from the National Biosafety Committee. In May 2026, the National Biosafety Committee separately approved amendments to the Pakistan Biosafety Rules 2005 that formally recognise gene-editing technologies, simplify GMO licensing, remove the 2024 sunset clause on GMO grain imports, and empower institutional biosafety committees to approve student-led research independently. No GMO/gene-edited labelling requirements have been enacted.",
+      "approach": "Product-based, case-by-case. SDN-1 and SDN-2 gene-edited plants without foreign DNA (or with DNA only from sexually compatible donors) are exempt from GMO regulation, subject to certification by the National Biosafety Committee.",
+      "further_reading_url": "https://cropgeregulations.com/pakistan-approves-new-national-agriculture-biotechnology-policy/"
     },
     "591": {
       "name": "Panama",
